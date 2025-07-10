@@ -44,7 +44,16 @@ function isValidGitHubRepoURL(url) {
       process.exit(1);
     }
     const { repoOwner, repoName, resultPath } = extract(input);
+    try{
     await fetchRepoData(repoOwner, repoName);
+    }catch(e){
+      console.error(
+        chalk.red(
+          "❌ Error: Could not find repo. Check if the repo is public"
+        )
+      );
+      process.exit(1)
+    }
     const jsonLangs = detectLangsFromJSON(resultPath);
     switch (output) {
       case "console":
