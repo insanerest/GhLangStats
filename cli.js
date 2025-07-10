@@ -57,6 +57,7 @@ function isValidGitHubRepoURL(url) {
             "❌ Error: Could not find repo. Check if the repo is public"
           )
         );
+        console.log(e)
         process.exit(1);
       }
       const jsonLangs = detectLangsFromJSON(resultPath);
