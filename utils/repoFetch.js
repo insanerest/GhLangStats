@@ -20,6 +20,9 @@ function ghGet(url) {
         res.on("data", (chunk) => (data += chunk));
         res.on("end", () => {
           if (res.statusCode >= 400) {
+            if (data) {
+              resolve({ error: true });
+            }
             reject(
               new Error(
                 `GitHub API Error: ${res.statusCode} ${res.statusMessage}`
@@ -40,7 +43,8 @@ function ghGet(url) {
 
 // --- Cache read/write ---
 function getCachePath(owner, repo) {
-  return path.join(CACHE_DIR, `${owner}_${repo}.json`);
+  const OWNER_DIR = path.join(CACHE_DIR, owner);
+  return path.join(OWNER_DIR, `${repo}.json`);
 }
 
 function readCache(owner, repo) {
@@ -54,6 +58,8 @@ function readCache(owner, repo) {
 }
 
 function writeCache(owner, repo, data) {
+  if (!fs.existsSync(path.join(CACHE_DIR, owner)))
+    fs.mkdirSync(path.join(CACHE_DIR, owner));
   const p = getCachePath(owner, repo);
   fs.writeFileSync(p, JSON.stringify(data, null, 2));
 }
@@ -61,6 +67,9 @@ function writeCache(owner, repo, data) {
 // --- Main repo fetcher ---
 async function fetchRepoData(owner, repo) {
   const repoMeta = await ghGet(`${GITHUB_API}/repos/${owner}/${repo}`);
+  if (repoMeta.error) {
+    return repoMeta;
+  }
   const pushedAt = repoMeta.pushed_at;
 
   const cache = readCache(owner, repo);
@@ -110,4 +119,4 @@ async function fetchRepoData(owner, repo) {
   return summary;
 }
 
-module.exports = fetchRepoData ;
+module.exports = fetchRepoData;
