@@ -41,7 +41,7 @@ function detectLangsFromJSON(repoJSON) {
   for (const file of allFiles.files) {
     const base = String(file.path).split("/").pop().toLowerCase();
     const ext = String(file.extension).toLowerCase();
-    if (ignoredFiles.has(base)) {
+    if (ignoredFiles.has(base)|| base.includes("config")) {
       continue; // skip counting this file
     }
     if (base === "dockerfile") {

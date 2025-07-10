@@ -64,7 +64,7 @@ function detectFrameworks(projectPath) {
 
     const ext = path.extname(filePath).toLowerCase();
     const base = path.basename(filePath).toLowerCase();
-    if (ignoredFiles.has(base)) {
+    if (ignoredFiles.has(base) || base.includes("config")) {
       continue; // skip counting this file
     }
 
