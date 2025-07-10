@@ -30,7 +30,11 @@ function walk(dir, fileList = []) {
     const fullPath = path.join(dir, file);
     const stat = fs.statSync(fullPath);
     if (stat.isDirectory()) {
-      if (!file.includes("node_modules") && !file.startsWith(".") && !file.includes("dist")) {
+      if (
+        !file.includes("node_modules") &&
+        !file.startsWith(".") &&
+        !file.includes("dist")
+      ) {
         walk(fullPath, fileList);
       }
     } else {
@@ -39,7 +43,6 @@ function walk(dir, fileList = []) {
   }
   return fileList;
 }
-
 
 // Main detector function
 function detectFrameworks(projectPath) {
@@ -61,7 +64,6 @@ function detectFrameworks(projectPath) {
   const deps = { ...pkgJson.dependencies, ...pkgJson.devDependencies };
 
   for (const filePath of allFiles) {
-
     const ext = path.extname(filePath).toLowerCase();
     const base = path.basename(filePath).toLowerCase();
     if (ignoredFiles.has(base) || base.includes("config")) {
@@ -71,8 +73,7 @@ function detectFrameworks(projectPath) {
     // Dockerfile detection by filename (no extension)
     if (base === "dockerfile") {
       const lang = "Dockerfile";
-      if (!languageStats[lang])
-        languageStats[lang] = { files: 0,bytes: 0 };
+      if (!languageStats[lang]) languageStats[lang] = { files: 0, bytes: 0 };
       languageStats[lang].files++;
       languageStats[lang].bytes += fs.statSync(filePath).size;
       continue;
@@ -81,16 +82,18 @@ function detectFrameworks(projectPath) {
     // Language detection by extension
     if (languageExtensions[ext]) {
       const lang = languageExtensions[ext];
-      if (!languageStats[lang])
-        languageStats[lang] = { files: 0, bytes: 0 };
+      if (!languageStats[lang]) languageStats[lang] = { files: 0, bytes: 0 };
       languageStats[lang].files++;
       languageStats[lang].bytes += fs.statSync(filePath).size;
     }
 
     // Framework detection from extension or config file name
     for (const fw of frameworkIndicators) {
+      if (fw.config.some((c) => file.path.endsWith(c))) {
+        frameworks.add(fw.name);
+        continue;
+      }
       if (fw.files.includes(ext)) frameworks.add(fw.name);
-      if (fw.config.some((c) => filePath.endsWith(c))) frameworks.add(fw.name);
     }
   }
 

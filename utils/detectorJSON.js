@@ -41,7 +41,7 @@ function detectLangsFromJSON(repoJSON) {
   for (const file of allFiles.files) {
     const base = String(file.path).split("/").pop().toLowerCase();
     const ext = String(file.extension).toLowerCase();
-    if (ignoredFiles.has(base)|| base.includes("config")) {
+    if (ignoredFiles.has(base) || base.includes("config")) {
       continue; // skip counting this file
     }
     if (base === "dockerfile") {
@@ -63,8 +63,11 @@ function detectLangsFromJSON(repoJSON) {
     }
 
     for (const fw of frameworkIndicators) {
+      if (fw.config.some((c) => file.path.endsWith(c))) {
+        frameworks.add(fw.name);
+        continue;
+      }
       if (fw.files.includes(ext)) frameworks.add(fw.name);
-      if (fw.config.some((c) => file.path.endsWith(c))) frameworks.add(fw.name);
     }
   }
   const totalBytes = Object.values(languageStats).reduce(
