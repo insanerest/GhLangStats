@@ -18,7 +18,7 @@ function isValidGitHubRepoURL(url) {
 (async function () {
   program
     .name("ghlangstats")
-    .description("CLI to create projects with templates")
+    .description("CLI to get Language usage details in any github repo")
     .option("-u, --url <url>", "Github Repo URL")
     .option(
       "-o, --output <type>",
