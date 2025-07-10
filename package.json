@@ -1,0 +1,24 @@
+{
+  "name": "ghlangstats",
+  "version": "1.0.0",
+  "description": "an API to detect programming languages and frameworks used in a GitHub user’s public repositories.",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/insanerest/GhLangStats.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/insanerest/GhLangStats/issues"
+  },
+  "homepage": "https://github.com/insanerest/GhLangStats#readme",
+  "dependencies": {
+    "cli-table3": "^0.6.5"
+  }
+}
