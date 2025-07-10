@@ -89,7 +89,7 @@ function detectFrameworks(projectPath) {
 
     // Framework detection from extension or config file name
     for (const fw of frameworkIndicators) {
-      if (fw.config.some((c) => file.path.endsWith(c))) {
+      if (fw.config.some((c) => filePath.endsWith(c))) {
         frameworks.add(fw.name);
         continue;
       }
