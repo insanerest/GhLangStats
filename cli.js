@@ -4,6 +4,7 @@ const chalk = require("chalk");
 const extract = require("./utils/extractFromURL");
 const fetchRepoData = require("./utils/repoFetch");
 const detectLangsFromJSON = require("./utils/detectorJSON");
+const detectLangs = require("./utils/detector");
 
 const renderConsole = require("./formatters/console");
 const renderMarkdown = require("./formatters/markdown");
@@ -20,6 +21,7 @@ function isValidGitHubRepoURL(url) {
     .name("ghlangstats")
     .description("CLI to get Language usage details in any github repo")
     .option("-u, --url <url>", "Github Repo URL")
+    .option("-d, --directory <path>", "Directory Path")
     .option(
       "-o, --output <type>",
       "Output type: json, console, markdown",
@@ -27,48 +29,81 @@ function isValidGitHubRepoURL(url) {
     )
     .parse();
   const opts = program.opts();
-  if (!opts.url) {
+  if (!opts.url && !opts.directory) {
     console.error(
-      chalk.red("❌ Error: --url is required. Type --help for more details")
+      chalk.red(
+        "❌ Error: --url or --directory is required. Type --help for more details"
+      )
     );
     process.exit(1);
   } else {
-    const input = String(opts.url);
-    const output = String(opts.output);
-    if (!isValidGitHubRepoURL(opts.url)) {
-      console.error(
-        chalk.red(
-          "❌ Error: Invalid URL. A valid URL must be like: https://github.com/github/docs"
-        )
-      );
-      process.exit(1);
-    }
-    const { repoOwner, repoName, resultPath } = extract(input);
-    try{
-    await fetchRepoData(repoOwner, repoName);
-    }catch(e){
-      console.error(
-        chalk.red(
-          "❌ Error: Could not find repo. Check if the repo is public"
-        )
-      );
-      process.exit(1)
-    }
-    const jsonLangs = detectLangsFromJSON(resultPath);
-    switch (output) {
-      case "console":
-        renderConsole(jsonLangs);
-        break
-      case "markdown":
-        const markdown = renderMarkdown(jsonLangs);
-        console.log(markdown);
-        break
-      case "json":
-        console.log(jsonLangs);
-        break
-      default:
-        renderConsole(jsonLangs);
-        break
+    if (opts.url) {
+      const input = String(opts.url);
+      const output = String(opts.output);
+      if (!isValidGitHubRepoURL(opts.url)) {
+        console.error(
+          chalk.red(
+            "❌ Error: Invalid URL. A valid URL must be like: https://github.com/github/docs"
+          )
+        );
+        process.exit(1);
+      }
+      const { repoOwner, repoName, resultPath } = extract(input);
+      try {
+        await fetchRepoData(repoOwner, repoName);
+      } catch (e) {
+        console.error(
+          chalk.red(
+            "❌ Error: Could not find repo. Check if the repo is public"
+          )
+        );
+        process.exit(1);
+      }
+      const jsonLangs = detectLangsFromJSON(resultPath);
+
+      switch (output) {
+        case "console":
+          renderConsole(jsonLangs);
+          break;
+        case "markdown":
+          const markdown = renderMarkdown(jsonLangs);
+          console.log(markdown);
+          break;
+        case "json":
+          console.log(jsonLangs);
+          break;
+        default:
+          renderConsole(jsonLangs);
+          break;
+      }
+    } else {
+      const input = String(opts.directory);
+      const output = opts.output;
+      try {
+        const langs = detectLangs(input);
+        switch (output) {
+          case "console":
+            renderConsole(langs);
+            break;
+          case "markdown":
+            const markdown = renderMarkdown(langs);
+            console.log(markdown);
+            break;
+          case "json":
+            console.log(langs);
+            break;
+          default:
+            renderConsole(langs);
+            break;
+        }
+      } catch (e) {
+        console.error(
+          chalk.red(
+            "❌ Error: Could not find directory. Check if it exists"
+          )
+        );
+        process.exit(1);
+      }
     }
   }
 })();
