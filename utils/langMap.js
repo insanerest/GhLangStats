@@ -23,6 +23,7 @@ module.exports = {
   ".cls": "Apex",
   ".cmake": "CMake",
   ".coffee": "CoffeeScript",
+  ".command": "Shell",
   ".cpp": "C++",
   ".cs": "C#",
   ".csh": "C Shell",
