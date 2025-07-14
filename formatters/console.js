@@ -6,8 +6,12 @@ const chalk = require("chalk");
  * @param {Object} stats - Parsed statistics object
  */
 function renderConsole(stats) {
+  const frameworks =
+    stats.frameworks && stats.frameworks.length
+      ? stats.frameworks.join(", ")
+      : "None";
   console.log(
-    chalk.bold("\n🧠 Frameworks Detected: ") + stats.frameworks.join(", ")
+    chalk.bold("\n🧠 Frameworks Detected: ") + frameworks
   );
 
   const table = new Table({
