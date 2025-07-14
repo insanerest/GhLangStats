@@ -23,7 +23,8 @@ const frameworkIndicators = [
 const ignoredFiles = new Set(require("./ignored"));
 
 // Extensive language-extension mapping (200+)
-const languageExtensions = require("./langMap");
+const languageExtensions = require("./langMap").main;
+const otherExtensions = require("./langMap").other;
 function walk(dir, fileList = []) {
   const files = fs.readdirSync(dir);
   for (const file of files) {
@@ -52,6 +53,7 @@ function detectFrameworks(projectPath) {
   // Language stats:
   // language => { files: count, lines: total lines, bytes: total bytes }
   const languageStats = {};
+  const otherStats = {};
 
   // Read package.json dependencies if available
   let pkgJson = {};
@@ -85,6 +87,12 @@ function detectFrameworks(projectPath) {
       if (!languageStats[lang]) languageStats[lang] = { files: 0, bytes: 0 };
       languageStats[lang].files++;
       languageStats[lang].bytes += fs.statSync(filePath).size;
+    }
+    if (otherExtensions[ext]) {
+      const lang = otherExtensions[ext];
+      if (!otherStats[lang]) otherStats[lang] = { files: 0, bytes: 0 };
+      otherStats[lang].files++;
+      otherStats[lang].bytes += fs.statSync(filePath).size;
     }
 
     // Framework detection from extension or config file name
@@ -126,10 +134,18 @@ function detectFrameworks(projectPath) {
         totalBytes > 0 ? ((stats.bytes / totalBytes) * 100).toFixed(2) : "0.00",
     };
   }
+  const detailedOther = {};
+  for (const [lang, stats] of Object.entries(otherStats)) {
+    detailedOther[lang] = {
+      files: stats.files,
+      bytes: stats.bytes,
+    };
+  }
 
   return {
     frameworks: [...frameworks],
     languages: detailedLanguages,
+    other:detailedOther,
     totals: {
       totalBytes,
       totalFiles: allFiles.length,

@@ -2,20 +2,18 @@ const getUserRepos = require("./getUserRepos");
 const combineStats = require("./combineStats");
 const getRepoStats = require("./getRepoStats");
 
-async function getUserStats(username) {
+async function getUserStats(excluded, username) {
   try {
     const userRepos = await getUserRepos(username);
 
     // Collect all promises from getRepoStats
     const stats = await Promise.all(
       userRepos.map(async (repo_url) => {
-        const stat = await getRepoStats(repo_url);
+        const stat = await getRepoStats(excluded, repo_url);
         return !stat.error ? stat : null;
       })
     );
-
     const filteredStats = stats.filter((stat) => stat !== null);
-
     const userStats = combineStats(filteredStats);
     return userStats;
   } catch (e) {

@@ -1,6 +1,7 @@
 // detector.js
 const fs = require("fs");
 const path = require("path");
+const shouldExclude = require("./shouldExclude")
 
 const frameworkIndicators = [
   { name: "React", match: ["react"], files: [".jsx", ".tsx"], config: [] },
@@ -24,7 +25,8 @@ const frameworkIndicators = [
 const ignoredFiles = new Set(require("./ignored"));
 
 // Extensive language-extension mapping (200+)
-const languageExtensions = require("./langMap");
+const languageExtensions = require("./langMap").main;
+const otherExtensions = require("./langMap").other;
 function getJSONFile(path) {
   try {
     const data = fs.readFileSync(path, "utf8");
@@ -33,15 +35,16 @@ function getJSONFile(path) {
     console.error("Error reading the file:", err);
   }
 }
-function detectLangsFromJSON(repoJSON) {
+function detectLangsFromJSON(excluded, repoJSON) {
   const allFiles = getJSONFile(repoJSON);
   const languageStats = {};
+  const otherStats = {}
   const frameworks = new Set();
 
   for (const file of allFiles.files) {
     const base = String(file.path).split("/").pop().toLowerCase();
     const ext = String(file.extension).toLowerCase();
-    if (ignoredFiles.has(base) || base.includes("config")) {
+    if (ignoredFiles.has(base) || base.includes("config") || shouldExclude(excluded,base)) {
       continue; // skip counting this file
     }
     if (base === "dockerfile") {
@@ -61,6 +64,14 @@ function detectLangsFromJSON(repoJSON) {
       languageStats[lang].files++;
       languageStats[lang].bytes += file.size;
     }
+    if (otherExtensions[ext]) {
+      const lang = otherExtensions[ext];
+      if (!otherStats[lang]) {
+        otherStats[lang] = { files: 0, bytes: 0 };
+      }
+      otherStats[lang].files++;
+      otherStats[lang].bytes += file.size;
+    }
 
     for (const fw of frameworkIndicators) {
       if (fw.config.some((c) => file.path.endsWith(c))) {
@@ -70,10 +81,16 @@ function detectLangsFromJSON(repoJSON) {
       if (fw.files.includes(ext)) frameworks.add(fw.name);
     }
   }
-  const totalBytes = Object.values(languageStats).reduce(
+
+  const languageBytes = Object.values(languageStats).reduce(
     (acc, v) => acc + v.bytes,
     0
-  );
+  ) 
+  const otherBytes = Object.values(otherStats).reduce(
+    (acc, v) => acc + v.bytes,
+    0
+  )
+  const totalBytes = languageBytes + otherBytes
 
   const detailedLanguages = {};
   for (const [lang, stats] of Object.entries(languageStats)) {
@@ -81,15 +98,25 @@ function detectLangsFromJSON(repoJSON) {
       files: stats.files,
       bytes: stats.bytes,
       bytesPercent:
-        totalBytes > 0 ? ((stats.bytes / totalBytes) * 100).toFixed(2) : "0.00",
+        totalBytes > 0 ? ((stats.bytes / languageBytes) * 100).toFixed(2) : "0.00",
+    };
+  }
+  const detailedOther = {};
+  for (const [lang, stats] of Object.entries(otherStats)) {
+    detailedOther[lang] = {
+      files: stats.files,
+      bytes: stats.bytes,
     };
   }
   return {
     frameworks: [...frameworks],
     languages: detailedLanguages,
+    other: detailedOther,
     totals: {
-      totalBytes,
       totalFiles: allFiles.files.length,
+      languageBytes: languageBytes,
+      otherBytes: otherBytes,
+      totalBytes: totalBytes
     },
   };
 }
