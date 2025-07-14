@@ -21,6 +21,17 @@ function renderMarkdown(stats) {
       data.bytesPercent
     }% |\n`;
   }
+  md += `\n\n`
+
+  md += `### 📊 Other Statistics\n\n`;
+  md += `| Language   | Files | Bytes   |\n`;
+  md += `|------------|-------|---------|\n`;
+
+  // Table Rows
+  for (const [lang, data] of Object.entries(stats.other)) {
+    md += `| ${lang} | ${data.files} | ${data.bytes.toLocaleString()}|\n`;
+  }
+
 
   // Totals
   md += `\n### 📦 Totals\n\n`;
