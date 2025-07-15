@@ -115,15 +115,15 @@ function detectFrameworks(projectPath) {
   }
 
   // Calculate totals for percentages
-  const totalLines = Object.values(languageStats).reduce(
-    (acc, v) => acc + v.lines,
-    0
-  );
-  const totalBytes = Object.values(languageStats).reduce(
+  const languageBytes = Object.values(languageStats).reduce(
     (acc, v) => acc + v.bytes,
     0
   );
-
+  const otherBytes = Object.values(otherStats).reduce(
+    (acc, v) => acc + v.bytes,
+    0
+  );
+  const totalBytes = languageBytes + otherBytes;
   // Add percentages
   const detailedLanguages = {};
   for (const [lang, stats] of Object.entries(languageStats)) {
@@ -141,14 +141,15 @@ function detectFrameworks(projectPath) {
       bytes: stats.bytes,
     };
   }
-
   return {
     frameworks: [...frameworks],
     languages: detailedLanguages,
-    other:detailedOther,
+    other: detailedOther,
     totals: {
-      totalBytes,
       totalFiles: allFiles.length,
+      languageBytes: languageBytes,
+      otherBytes: otherBytes,
+      totalBytes: totalBytes,
     },
   };
 }
