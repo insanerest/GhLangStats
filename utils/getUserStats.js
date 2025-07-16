@@ -2,7 +2,8 @@ const getUserRepos = require("./getUserRepos");
 const combineStats = require("./combineStats");
 const getRepoStats = require("./getRepoStats");
 
-async function getUserStats(excluded, username) {
+async function getUserStats(username, excluded) {
+  excluded = excluded || []
   try {
     const userRepos = await getUserRepos(username);
 
