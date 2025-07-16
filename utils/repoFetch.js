@@ -21,7 +21,7 @@ function ghGet(url) {
         res.on("end", () => {
           if (res.statusCode >= 400) {
             if (data) {
-              resolve({ error: true });
+              resolve({ error: true, msg: res.statusMessage });
             }
             reject(
               new Error(
