@@ -10,7 +10,7 @@ async function getUserStats(username, excluded) {
     // Collect all promises from getRepoStats
     const stats = await Promise.all(
       userRepos.map(async (repo_url) => {
-        const stat = await getRepoStats(excluded, repo_url);
+        const stat = await getRepoStats(repo_url, excluded);
         return !stat.error ? stat : null;
       })
     );
