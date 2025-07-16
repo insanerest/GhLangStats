@@ -1,10 +1,15 @@
 {
   "name": "ghlangstats",
   "version": "1.0.0",
-  "description": "an API to detect programming languages and frameworks used in a GitHub user’s public repositories.",
+  "description": "a CLI to detect programming languages and frameworks used in a GitHub user’s public repositories.",
   "main": "cli.js",
+  "bin": {
+    "ghlangstats": "./bin/cli.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "linkcli": "node postinstall.js && echo 'Linking the package may take a few minutes' && npm link",
+    "rmcli": "npm unlink -g ghlangstats"
   },
   "repository": {
     "type": "git",
