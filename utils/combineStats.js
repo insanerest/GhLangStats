@@ -44,7 +44,6 @@ function combineStats(statsArray) {
 
   // Convert frameworks Set to Array
   combined.frameworks = Array.from(combined.frameworks);
-  console.log(combined)
   return combined;
 }
 
