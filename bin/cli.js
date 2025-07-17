@@ -41,7 +41,7 @@ program
   .option("-d, --directory <path>", "Path to local project directory")
   .option("-p, --profile <username>", "GitHub username to analyze")
   .option(
-    "-o, --output <type>",
+    "-f, --format <type>",
     "Output format: console, markdown, json",
     "console"
   )
@@ -57,7 +57,7 @@ Examples:
   $ ghlangstats --url https://github.com/github/docs
   $ ghlangstats --directory ./my-project
   $ ghlangstats --profile insanerest
-  $ ghlangstats -u https://github.com/octocat/Hello-World -o json
+  $ ghlangstats -u https://github.com/octocat/Hello-World -f json
 `
   );
 
@@ -69,7 +69,7 @@ Examples:
     : [];
 
   const allowedOutputs = ["console", "markdown", "json"];
-  const outputType = String(opts.output || "console").toLowerCase();
+  const outputType = String(opts.format || "console").toLowerCase();
 
   if (!allowedOutputs.includes(outputType)) {
     console.error(
@@ -146,7 +146,7 @@ Examples:
   // Handle GitHub Profile
   else if (opts.profile) {
     try {
-      const stats = await getUserStats(excluded, String(opts.profile));
+      const stats = await getUserStats(String(opts.profile),excluded);
       if (stats.error) {
         console.error(
           chalk.red("❌ Error: GitHub API rate-limited or user not found.")

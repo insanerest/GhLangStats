@@ -3,7 +3,7 @@ function combineStats(statsArray) {
     frameworks: new Set(),
     languages: {},
     other: {},
-    totals: { totalBytes: 0, totalFiles: 0 },
+    totals: { totalBytes: 0, totalFiles: 0, languageBytes: 0, otherBytes:0 },
   };
 
   for (const stat of statsArray) {
@@ -27,7 +27,7 @@ function combineStats(statsArray) {
     }
 
     // Merge totals
-    combined.totals.languageBytes += stat.totals.languageByte;
+    combined.totals.languageBytes += stat.totals.languageBytes;
     combined.totals.otherBytes += stat.totals.otherBytes;
     combined.totals.totalBytes += stat.totals.totalBytes;
     combined.totals.totalFiles += stat.totals.totalFiles;
@@ -44,7 +44,7 @@ function combineStats(statsArray) {
 
   // Convert frameworks Set to Array
   combined.frameworks = Array.from(combined.frameworks);
-
+  console.log(combined)
   return combined;
 }
 
