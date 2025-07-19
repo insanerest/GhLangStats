@@ -51,7 +51,7 @@ ghlangstats <options>
 
 **Example:**
 ```bash
-node bin/cli.js --profile insanerest --output json
+node bin/cli.js --user insanerest --format json
 ```
 For Help:
 
