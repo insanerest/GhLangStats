@@ -7,8 +7,10 @@ function renderMarkdown(stats) {
   let md = "";
 
   // Frameworks
-  md += `### 🧠 Frameworks Detected\n\n`;
-  md += `\`${stats.frameworks.join("`, `")}\`\n\n`;
+  md += `### 🧠 Frameworks Detected: `;
+  md += `${
+    stats.frameworks.join(", ") ? stats.frameworks.join(", ") : "None"
+  }\n\n`;
 
   // Table Header
   md += `### 📊 Language Statistics\n\n`;
@@ -21,7 +23,7 @@ function renderMarkdown(stats) {
       data.bytesPercent
     }% |\n`;
   }
-  md += `\n\n`
+  md += `\n\n`;
 
   md += `### 📊 Other Statistics\n\n`;
   md += `| Language   | Files | Bytes   |\n`;
@@ -31,7 +33,6 @@ function renderMarkdown(stats) {
   for (const [lang, data] of Object.entries(stats.other)) {
     md += `| ${lang} | ${data.files} | ${data.bytes.toLocaleString()}|\n`;
   }
-
 
   // Totals
   md += `\n### 📦 Totals\n\n`;
