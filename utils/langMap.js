@@ -117,7 +117,6 @@ module.exports = {
     ".swift": "Swift",
     ".tcl": "Tcl",
     ".tex": "LaTeX",
-    ".toml": "TOML",
     ".ts": "TypeScript",
     ".tsx": "Typescript (TSX)",
     ".vala": "Vala",
@@ -130,6 +129,7 @@ module.exports = {
     ".zig": "Zig",
   },
   other: {
+    ".toml": "TOML",
     ".md": "Markdown",
     ".txt": "Text",
     ".rst": "reStructuredText",
