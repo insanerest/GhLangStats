@@ -37,9 +37,9 @@ program
   .name("ghlangstats")
   .description("CLI to get language usage details in any GitHub repo")
   .version("1.0.0")
-  .option("-u, --url <url>", "GitHub repository URL")
+  .option("-r, --repo <url>", "GitHub repository URL")
   .option("-d, --directory <path>", "Path to local project directory")
-  .option("-p, --profile <username>", "GitHub username to analyze")
+  .option("-u, --user <username>", "GitHub username to analyze")
   .option(
     "-f, --format <type>",
     "Output format: console, markdown, json",
@@ -63,6 +63,14 @@ Examples:
 
 (async () => {
   program.parse();
+  const noArgs =
+    process.argv.length <= 2 || // only `node cli.js`
+    (program.args.length === 0 && // no subcommands
+      Object.keys(program.opts()).length === 0); // no options/flags
+      if (noArgs) {
+        program.outputHelp();
+        process.exit(0);
+      }
   const opts = program.opts();
   const excluded = opts.exclude
     ? opts.exclude.split(",").map((p) => p.trim())
@@ -83,18 +91,18 @@ Examples:
   }
 
   // Must provide at least one of url, directory, or profile
-  if (!opts.url && !opts.directory && !opts.profile) {
+  if (!opts.repo && !opts.directory && !opts.user) {
     console.error(
       chalk.red(
-        "❌ Error: You must provide --url, --directory, or --profile. Use --help for usage examples."
+        "❌ Error: You must provide --repo, --directory, or --user. Use --help for usage examples."
       )
     );
     process.exit(1);
   }
 
   // Handle GitHub Repo URL
-  if (opts.url) {
-    const input = String(opts.url);
+  if (opts.repo) {
+    const input = String(opts.repo);
     if (!isValidGitHubRepoURL(input)) {
       console.error(
         chalk.red(
@@ -144,9 +152,9 @@ Examples:
   }
 
   // Handle GitHub Profile
-  else if (opts.profile) {
+  else if (opts.user) {
     try {
-      const stats = await getUserStats(String(opts.profile),excluded);
+      const stats = await getUserStats(String(opts.user),excluded);
       if (stats.error) {
         console.error(
           chalk.red("❌ Error: GitHub API rate-limited or user not found.")
