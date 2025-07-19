@@ -34,7 +34,9 @@ function walk(dir, fileList = []) {
       if (
         !file.includes("node_modules") &&
         !file.startsWith(".") &&
-        !file.includes("dist")
+        !file.includes("dist") &&
+        !file.includes("test") &&
+        !file.includes("tests")
       ) {
         walk(fullPath, fileList);
       }

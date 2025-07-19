@@ -1,7 +1,7 @@
 // detector.js
 const fs = require("fs");
 const path = require("path");
-const shouldExclude = require("./shouldExclude")
+const shouldExclude = require("./shouldExclude");
 
 const frameworkIndicators = [
   { name: "React", match: ["react"], files: [".jsx", ".tsx"], config: [] },
@@ -38,14 +38,28 @@ function getJSONFile(path) {
 function detectLangsFromJSON(excluded, repoJSON) {
   const allFiles = getJSONFile(repoJSON);
   const languageStats = {};
-  const otherStats = {}
+  const otherStats = {};
   const frameworks = new Set();
 
   for (const file of allFiles.files) {
     const base = String(file.path).split("/").pop().toLowerCase();
     const ext = String(file.extension).toLowerCase();
-    if (ignoredFiles.has(base) || base.includes("config") || shouldExclude(excluded,base)) {
+    const filePath = String(file.path);
+    if (
+      ignoredFiles.has(base) ||
+      base.includes("config") ||
+      shouldExclude(excluded, base)
+    ) {
       continue; // skip counting this file
+    }
+    if (
+      filePath.includes("node_modules") ||
+      filePath.startsWith(".") ||
+      filePath.includes("dist") ||
+      filePath.includes("/test/") ||
+      filePath.includes("/tests/")
+    ) {
+      continue;
     }
     if (base === "dockerfile") {
       const lang = "Dockerfile";
@@ -85,12 +99,12 @@ function detectLangsFromJSON(excluded, repoJSON) {
   const languageBytes = Object.values(languageStats).reduce(
     (acc, v) => acc + v.bytes,
     0
-  ) 
+  );
   const otherBytes = Object.values(otherStats).reduce(
     (acc, v) => acc + v.bytes,
     0
-  )
-  const totalBytes = languageBytes + otherBytes
+  );
+  const totalBytes = languageBytes + otherBytes;
 
   const detailedLanguages = {};
   for (const [lang, stats] of Object.entries(languageStats)) {
@@ -98,7 +112,9 @@ function detectLangsFromJSON(excluded, repoJSON) {
       files: stats.files,
       bytes: stats.bytes,
       bytesPercent:
-        totalBytes > 0 ? ((stats.bytes / languageBytes) * 100).toFixed(2) : "0.00",
+        totalBytes > 0
+          ? ((stats.bytes / languageBytes) * 100).toFixed(2)
+          : "0.00",
     };
   }
   const detailedOther = {};
@@ -116,7 +132,7 @@ function detectLangsFromJSON(excluded, repoJSON) {
       totalFiles: allFiles.files.length,
       languageBytes: languageBytes,
       otherBytes: otherBytes,
-      totalBytes: totalBytes
+      totalBytes: totalBytes,
     },
   };
 }
