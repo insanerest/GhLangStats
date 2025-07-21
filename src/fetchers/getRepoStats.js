@@ -1,6 +1,6 @@
 const repoFetchData = require("./repoFetch");
-const extract = require("./extractFromURL");
-const detectLangsFromJSON = require("./detectorJSON");
+const extract = require("../utils/extractFromURL");
+const detectLangsFromJSON = require("../detectors/detectorJSON");
 
 async function getRepoStats(repoUrl, excluded) {
   excluded = excluded || [];

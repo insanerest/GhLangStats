@@ -2,14 +2,13 @@
 
 const { Command } = require("commander");
 const chalk = require("chalk");
-const extract = require("../utils/extractFromURL");
-const fetchRepoData = require("../utils/repoFetch");
-const detectLangsFromJSON = require("../utils/detectorJSON");
-const detectLangs = require("../utils/detector");
-const getUserStats = require("../utils/getUserStats");
-const renderConsole = require("../formatters/console");
-const renderMarkdown = require("../formatters/markdown");
-const { exec } = require("child_process");
+const extract = require("../src/utils/extractFromURL");
+const fetchRepoData = require("../src/fetchers/repoFetch");
+const detectLangsFromJSON = require("../src/detectors/detectorJSON");
+const detectLangs = require("../src/detectors/detector");
+const getUserStats = require("../src/fetchers/getUserStats");
+const renderConsole = require("../src/formatters/console");
+const renderMarkdown = require("../src/formatters/markdown");
 
 const program = new Command();
 

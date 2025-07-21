@@ -1,7 +1,7 @@
 // detector.js
 const fs = require("fs");
 const path = require("path");
-const shouldExclude = require("./shouldExclude");
+const shouldExclude = require("../utils/shouldExclude");
 
 const frameworkIndicators = [
   { name: "React", match: ["react"], files: [".jsx", ".tsx"], config: [] },
@@ -22,11 +22,11 @@ const frameworkIndicators = [
   },
 ];
 
-const ignoredFiles = new Set(require("./ignored"));
+const ignoredFiles = new Set(require("../utils/ignored"));
 
 // Extensive language-extension mapping (200+)
-const languageExtensions = require("./langMap").main;
-const otherExtensions = require("./langMap").other;
+const languageExtensions = require("../utils/langMap").main;
+const otherExtensions = require("../utils/langMap").other;
 function getJSONFile(path) {
   try {
     const data = fs.readFileSync(path, "utf8");
