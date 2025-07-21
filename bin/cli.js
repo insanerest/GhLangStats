@@ -9,6 +9,7 @@ const detectLangs = require("../utils/detector");
 const getUserStats = require("../utils/getUserStats");
 const renderConsole = require("../formatters/console");
 const renderMarkdown = require("../formatters/markdown");
+const { exec } = require("child_process");
 
 const program = new Command();
 
@@ -61,16 +62,39 @@ Examples:
 `
   );
 
+program
+  .command("update")
+  .description("Update the CLI")
+  .action(async () => {
+    const command = `npm uninstall ghlangstats && npm install -g https://github.com/insanerest/GhLangStats`;
+
+    exec(command, (error, stdout, stderr) => {
+      if (error) {
+        console.error(`❌ Error executing command:\n${error.message}`);
+        return;
+      }
+
+      if (stderr) {
+        console.warn(`⚠️ stderr:\n${stderr}`);
+      }
+
+      console.log("Updated")
+    });
+  });
 (async () => {
   program.parse();
+  if(program.args.includes("update")){
+    return
+  }
   const noArgs =
     process.argv.length <= 2 || // only `node cli.js`
     (program.args.length === 0 && // no subcommands
       Object.keys(program.opts()).length === 0); // no options/flags
-      if (noArgs) {
-        program.outputHelp();
-        process.exit(0);
-      }
+  if (noArgs) {
+    program.outputHelp();
+    process.exit(0);
+  }
+
   const opts = program.opts();
   const excluded = opts.exclude
     ? opts.exclude.split(",").map((p) => p.trim())
@@ -154,7 +178,7 @@ Examples:
   // Handle GitHub Profile
   else if (opts.user) {
     try {
-      const stats = await getUserStats(String(opts.user),excluded);
+      const stats = await getUserStats(String(opts.user), excluded);
       if (stats.error) {
         console.error(
           chalk.red("❌ Error: GitHub API rate-limited or user not found.")
