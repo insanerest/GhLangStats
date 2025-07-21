@@ -55,37 +55,15 @@ program
     "after",
     `
 Examples:
-  $ ghlangstats --url https://github.com/github/docs
+  $ ghlangstats --repo https://github.com/github/docs
   $ ghlangstats --directory ./my-project
-  $ ghlangstats --profile insanerest
-  $ ghlangstats -u https://github.com/octocat/Hello-World -f json
+  $ ghlangstats --user insanerest
+  $ ghlangstats -r https://github.com/octocat/Hello-World -f json
 `
   );
 
-program
-  .command("update")
-  .description("Update the CLI")
-  .action(async () => {
-    const command = `npm uninstall ghlangstats && npm install -g https://github.com/insanerest/GhLangStats`;
-
-    exec(command, (error, stdout, stderr) => {
-      if (error) {
-        console.error(`❌ Error executing command:\n${error.message}`);
-        return;
-      }
-
-      if (stderr) {
-        console.warn(`⚠️ stderr:\n${stderr}`);
-      }
-
-      console.log("Updated")
-    });
-  });
 (async () => {
   program.parse();
-  if(program.args.includes("update")){
-    return
-  }
   const noArgs =
     process.argv.length <= 2 || // only `node cli.js`
     (program.args.length === 0 && // no subcommands
