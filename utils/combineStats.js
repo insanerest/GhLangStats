@@ -35,10 +35,10 @@ function combineStats(statsArray) {
 
 
   // Calculate bytesPercent
-  const totalBytes = combined.totals.totalBytes;
+  const languageBytes = combined.totals.languageBytes;
   for (const lang in combined.languages) {
     const bytes = combined.languages[lang].bytes;
-    const percent = ((bytes / totalBytes) * 100).toFixed(2);
+    const percent = ((bytes / languageBytes) * 100).toFixed(2);
     combined.languages[lang].bytesPercent = percent;
   }
 
