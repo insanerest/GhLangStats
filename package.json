@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "linkcli": "node postinstall.js && echo 'Linking the package may take a few minutes' && npm link",
-    "rmcli": "npm unlink -g ghlangstats"
+    "rmcli": "npm unlink -g ghlangstats",
+    "update": "npm run rmcli && npm run linkcli"
   },
   "repository": {
     "type": "git",
