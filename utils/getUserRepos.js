@@ -1,3 +1,5 @@
+const getTokenOwner = require("./getTokenOwner")
+
 async function getUserRepos(username, token = null) {
   const perPage = 100;
   let page = 1;
@@ -6,9 +8,9 @@ async function getUserRepos(username, token = null) {
     Accept: "application/vnd.github+json",
   };
   if (token) headers.Authorization = `Bearer ${token}`;
-
+  const owner = await getTokenOwner(token)
   while (true) {
-    const url = token
+    const url = token && username === owner
       ? `https://api.github.com/user/repos?per_page=${perPage}&page=${page}`
       : `https://api.github.com/users/${username}/repos?per_page=${perPage}&page=${page}`;
     const res = await fetch(url, { method: "GET", headers });
