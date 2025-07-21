@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const https = require("https");
+require("dotenv").config();
 
 const CACHE_DIR = path.join(__dirname, "..", "cache");
 if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR);
@@ -10,6 +11,10 @@ const HEADERS = {
   "User-Agent": "repoFetcher/1.0",
   Accept: "application/vnd.github.v3+json",
 };
+const token = process.env.GITHUB_TOKEN;
+if (token) {
+  HEADERS.Authorization = `Bearer ${token}`;
+}
 
 // --- Core helper: GET with Promise ---
 function ghGet(url) {
@@ -84,7 +89,9 @@ async function fetchRepoData(owner, repo) {
   const treeResp = await ghGet(
     `${GITHUB_API}/repos/${owner}/${repo}/git/trees/${defaultBranch}?recursive=1`
   );
-
+  if (treeResp.error) {
+    return treeResp;
+  }
   const files = treeResp.tree.filter((item) => item.type === "blob");
   const summary = {
     owner,

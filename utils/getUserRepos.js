@@ -3,15 +3,15 @@ async function getUserRepos(username, token = null) {
   let page = 1;
   let allRepos = [];
   const headers = {
-    "User-Agent": "gh-repo-fetcher",
-    Accept: "application/vnd.github.v3+json",
+    Accept: "application/vnd.github+json",
   };
   if (token) headers.Authorization = `Bearer ${token}`;
 
   while (true) {
-    const url = `https://api.github.com/users/${username}/repos?per_page=${perPage}&page=${page}`;
-    const res = await fetch(url, { headers });
-
+    const url = token
+      ? `https://api.github.com/user/repos?per_page=${perPage}&page=${page}`
+      : `https://api.github.com/users/${username}/repos?per_page=${perPage}&page=${page}`;
+    const res = await fetch(url, { method: "GET", headers });
     if (!res.ok) {
       throw new Error(`GitHub API error: ${res.status} ${res.statusText}`);
     }
@@ -27,7 +27,7 @@ async function getUserRepos(username, token = null) {
     page++;
   }
 
-  return allRepos.map((repo) => (repo.html_url));
+  return allRepos.map((repo) => repo.html_url);
 }
 
-module.exports = getUserRepos
+module.exports = getUserRepos;

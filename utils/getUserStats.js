@@ -1,12 +1,12 @@
 const getUserRepos = require("./getUserRepos");
 const combineStats = require("./combineStats");
 const getRepoStats = require("./getRepoStats");
-
+require("dotenv").config();
 async function getUserStats(username, excluded) {
-  excluded = excluded || []
+  excluded = excluded || [];
+  const token = process.env.GITHUB_TOKEN;
   try {
-    const userRepos = await getUserRepos(username);
-
+    const userRepos = await getUserRepos(username, token);
     // Collect all promises from getRepoStats
     const stats = await Promise.all(
       userRepos.map(async (repo_url) => {
