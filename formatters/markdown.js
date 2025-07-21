@@ -19,9 +19,15 @@ function renderMarkdown(stats) {
 
   // Table Rows
   for (const [lang, data] of Object.entries(stats.languages)) {
-    md += `| ${lang} | ${data.files} | ${data.bytes.toLocaleString()} | ${
-      data.bytesPercent
-    }% |\n`;
+    md += `| ${lang}${" ".repeat(
+      "------------" - (String(lang).length + 1)
+    )} | ${data.files}${" ".repeat(
+      "-------".length - (String(data.files).length + 2)
+    )} | ${data.bytes.toLocaleString()}${" ".repeat(
+      "---------".length - (String(data.bytes.toLocaleString()).length + 2)
+    )} | ${data.bytesPercent}%${" ".repeat(
+      "---------".length - (String(data.bytesPercent).length + 3)
+    )} |\n`;
   }
   md += `\n\n`;
 
@@ -31,7 +37,13 @@ function renderMarkdown(stats) {
 
   // Table Rows
   for (const [lang, data] of Object.entries(stats.other)) {
-    md += `| ${lang} | ${data.files} | ${data.bytes.toLocaleString()}|\n`;
+    md += `| ${lang}${" ".repeat(
+      "------------".length - (lang.length + 2)
+    )} | ${data.files}${" ".repeat(
+      "-------".length - (String(data.files).length + 2)
+    )} | ${data.bytes.toLocaleString()}${" ".repeat(
+      "---------".length - (String(data.bytes.toLocaleString()).length + 2)
+    )} |\n`;
   }
 
   // Totals
