@@ -25,6 +25,9 @@ function ghGet(url) {
         res.on("data", (chunk) => (data += chunk));
         res.on("end", () => {
           if (res.statusCode >= 400) {
+            if(res.statusCode === 404){
+              reject(new Error("Repo cannot be found"))
+            }
             if (data) {
               resolve({ error: true, msg: res.statusMessage });
             }
