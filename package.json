@@ -13,7 +13,7 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "test": "jes --coverage",
+    "test": "jest --coverage",
     "linkcli": "node postinstall.js && echo 'Linking the package may take a few minutes' && npm link",
     "rmcli": "npm unlink -g ghlangstats",
     "update": "npm run rmcli && npm run linkcli"
