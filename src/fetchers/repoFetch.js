@@ -25,8 +25,8 @@ function ghGet(url) {
         res.on("data", (chunk) => (data += chunk));
         res.on("end", () => {
           if (res.statusCode >= 400) {
-            if(res.statusCode === 404){
-              reject(new Error("Repo cannot be found"))
+            if (res.statusCode === 404) {
+              reject(new Error("Repo cannot be found"));
             }
             if (data) {
               resolve({ error: true, msg: res.statusMessage });
@@ -95,6 +95,7 @@ async function fetchRepoData(owner, repo) {
   if (treeResp.error) {
     return treeResp;
   }
+  if (!treeResp.tree) return { error: "true", msg: "Invalid Tree" };
   const files = treeResp.tree.filter((item) => item.type === "blob");
   const summary = {
     owner,
