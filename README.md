@@ -1,6 +1,10 @@
 
 # GhLangStats
 
+[![codecov](https://codecov.io/gh/insanerest/GhLangStats/branch/main/graph/badge.svg)](https://codecov.io/gh/insanerest/GhLangStats)
+![issues](https://img.shields.io/github/issues/insanerest/GhLangStats)
+![license](https://img.shields.io/github/license/insanerest/GhLangStats)
+
 > 🧠 A CLI to detect programming languages and frameworks used in a GitHub user’s public repositories.
 
 ---
@@ -82,17 +86,11 @@ Pull requests are welcome! For major changes, please open an issue first.
 
 ## 🐞 Issues
 
-![issues](https://img.shields.io/github/issues/insanerest/GhLangStats)
-
-
 Found a bug or have a suggestion? [Open an issue](https://github.com/insanerest/GhLangStats/issues).
 
 ---
 
 ## 📄 License
-
-![license](https://img.shields.io/github/license/insanerest/GhLangStats)
-
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
