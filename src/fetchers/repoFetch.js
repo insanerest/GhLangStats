@@ -82,11 +82,11 @@ async function fetchRepoData(owner, repo) {
 
   const cache = readCache(owner, repo);
   if (cache && cache.pushed_at === pushedAt) {
-    // console.log(`[CACHE] Using cached data for ${owner}/${repo}`);
+    console.log(`[CACHE] Using cached data for ${owner}/${repo}`);
     return cache;
   }
 
-  // console.log(`[FETCH] Updating data for ${owner}/${repo}`);
+  console.log(`[FETCH] Updating data for ${owner}/${repo}`);
 
   const defaultBranch = repoMeta.default_branch;
   const treeResp = await ghGet(
