@@ -3,7 +3,7 @@ const path = require("path");
 const https = require("https");
 require("dotenv").config({ quiet: true, debug: false });
 
-const CACHE_DIR = path.join(__dirname, "..", "cache");
+const CACHE_DIR = path.resolve("src", "cache");
 if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR);
 
 const GITHUB_API = "https://api.github.com";
