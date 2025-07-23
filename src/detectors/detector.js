@@ -20,11 +20,11 @@ const frameworkIndicators = [
     config: ["svelte.config.js"],
   },
 ];
-const ignoredFiles = new Set(require("./ignored"));
+const ignoredFiles = new Set(require("../utils/ignored"));
 
 // Extensive language-extension mapping (200+)
-const languageExtensions = require("./langMap").main;
-const otherExtensions = require("./langMap").other;
+const languageExtensions = require("../utils/langMap").main;
+const otherExtensions = require("../utils/langMap").other;
 function walk(dir, fileList = []) {
   const files = fs.readdirSync(dir);
   for (const file of files) {
