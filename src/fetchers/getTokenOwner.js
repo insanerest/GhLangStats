@@ -6,6 +6,7 @@ async function getTokenOwner(token) {
     },
   });
   if(res.ok){
+    console.log(res.ok)
     const { login } = await res.json();
     return login;
   }
