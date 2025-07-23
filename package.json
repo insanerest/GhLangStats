@@ -6,6 +6,12 @@
   "bin": {
     "ghlangstats": "./bin/cli.js"
   },
+  "jest": {
+    "setupFiles": [
+      "./jest.setup.js"
+    ],
+    "testEnvironment": "node"
+  },
   "scripts": {
     "test": "jest",
     "linkcli": "node postinstall.js && echo 'Linking the package may take a few minutes' && npm link",
@@ -32,6 +38,7 @@
     "minimatch": "^10.0.3"
   },
   "devDependencies": {
-    "jest": "^30.0.4"
+    "jest": "^30.0.5",
+    "jest-fetch-mock": "^3.0.3"
   }
 }
