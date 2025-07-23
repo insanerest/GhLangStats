@@ -1,0 +1,3545 @@
+{
+  "owner": "syvixor",
+  "repo": "skills-icons",
+  "pushed_at": "2025-07-21T20:44:49Z",
+  "scanned_at": "2025-07-21T22:19:33.909Z",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "size": 68,
+      "extension": ""
+    },
+    {
+      "path": ".github/CODE_OF_CONDUCT.md",
+      "size": 2463,
+      "extension": ".md"
+    },
+    {
+      "path": ".github/CONTRIBUTING.md",
+      "size": 1735,
+      "extension": ".md"
+    },
+    {
+      "path": ".github/ICON_TEMPLATES/icon.svg",
+      "size": 180,
+      "extension": ".svg"
+    },
+    {
+      "path": ".github/ICON_TEMPLATES/themed_icon.svg",
+      "size": 317,
+      "extension": ".svg"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "size": 510,
+      "extension": ".yml"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/icon_removal.yml",
+      "size": 1539,
+      "extension": ".yml"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/icon_request.yml",
+      "size": 1058,
+      "extension": ".yml"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/question.yml",
+      "size": 658,
+      "extension": ".yml"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "size": 1436,
+      "extension": ".md"
+    },
+    {
+      "path": ".github/banner.png",
+      "size": 192040,
+      "extension": ".png"
+    },
+    {
+      "path": ".gitignore",
+      "size": 99,
+      "extension": ""
+    },
+    {
+      "path": "Dockerfile",
+      "size": 536,
+      "extension": ""
+    },
+    {
+      "path": "LICENSE",
+      "size": 1083,
+      "extension": ""
+    },
+    {
+      "path": "README.md",
+      "size": 3776,
+      "extension": ".md"
+    },
+    {
+      "path": "icons/8th.svg",
+      "size": 8288,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/activitypub.svg",
+      "size": 1376,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/actix.svg",
+      "size": 8224,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/adobe.svg",
+      "size": 476,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/adobeaftereffects.svg",
+      "size": 2358,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/adobeaudition.svg",
+      "size": 2373,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/adobedreamweaver.svg",
+      "size": 3630,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/adobeillustrator.svg",
+      "size": 1731,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/adobeindesign.svg",
+      "size": 1809,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/adobelightroom.svg",
+      "size": 1631,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/adobephotoshop.svg",
+      "size": 3283,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/adobepremierepro.svg",
+      "size": 2370,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/adobexd.svg",
+      "size": 2974,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/adonisjs.svg",
+      "size": 849,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/airflow.svg",
+      "size": 3180,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/aiscript.svg",
+      "size": 8377,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/alacritty.svg",
+      "size": 1094,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/algolia.svg",
+      "size": 1857,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/alpinejs.svg",
+      "size": 671,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/alpinelinux.svg",
+      "size": 2011,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/amazonwebservices.svg",
+      "size": 6093,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/anaconda.svg",
+      "size": 5137,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/android.svg",
+      "size": 3611,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/androidstudio.svg",
+      "size": 4577,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/angularjs.svg",
+      "size": 684,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/ansible.svg",
+      "size": 767,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/apache.svg",
+      "size": 11610,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/apachehop.svg",
+      "size": 2915,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/apachejmeter.svg",
+      "size": 17657,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/apachemaven.svg",
+      "size": 22030,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/apidog.svg",
+      "size": 3983,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/apifox.svg",
+      "size": 3363,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/apollo.svg",
+      "size": 1783,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/appian.svg",
+      "size": 3132,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/appium.svg",
+      "size": 5988,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/apple.svg",
+      "size": 1308,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/appwrite.svg",
+      "size": 1004,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/arcbrowser.svg",
+      "size": 3930,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/archlinux.svg",
+      "size": 1133,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/archunit.svg",
+      "size": 1472,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/arduino.svg",
+      "size": 1497,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/argocd.svg",
+      "size": 8831,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/arturo.svg",
+      "size": 70194,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/asciidoctordocs.svg",
+      "size": 3278,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/aseprite.svg",
+      "size": 739,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/assembly.svg",
+      "size": 3047,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/astro.svg",
+      "size": 2341,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/atom.svg",
+      "size": 4085,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/auth0.svg",
+      "size": 678,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/authy.svg",
+      "size": 1528,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/autocad.svg",
+      "size": 3718,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/avaloniaui.svg",
+      "size": 1306,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/axios.svg",
+      "size": 3352,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/azul.svg",
+      "size": 1517,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/azure.svg",
+      "size": 3148,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/babel.svg",
+      "size": 24738,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/babylonjs.svg",
+      "size": 1345,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/backbonejs.svg",
+      "size": 765,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/balenaetcher.svg",
+      "size": 2476,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/ballerina.svg",
+      "size": 4172,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/baseui.svg",
+      "size": 923,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/bash.svg",
+      "size": 2667,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/beagleboard.svg",
+      "size": 32519,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/beeflang.svg",
+      "size": 3084,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/bento.svg",
+      "size": 3744,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/betterauth.svg",
+      "size": 516,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/bevy.svg",
+      "size": 4509,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/bing.svg",
+      "size": 5003,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/biome.svg",
+      "size": 802,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/bitbucket.svg",
+      "size": 1542,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/blazor.svg",
+      "size": 3943,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/blender.svg",
+      "size": 2902,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/bluesky.svg",
+      "size": 1008,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/bolt.svg",
+      "size": 758,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/bookstack.svg",
+      "size": 2162,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/bootstrap.svg",
+      "size": 1262,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/box2d.svg",
+      "size": 1278,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/brave.svg",
+      "size": 6557,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/bugsnag.svg",
+      "size": 1001,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/builder.svg",
+      "size": 1832,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/bullmq.svg",
+      "size": 9675,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/bulma.svg",
+      "size": 449,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/bun.svg",
+      "size": 9153,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/burncloud.svg",
+      "size": 1819,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/c.svg",
+      "size": 746,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/cairo.svg",
+      "size": 2016,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/cakebuild.svg",
+      "size": 6465,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/cakephp.svg",
+      "size": 824,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/camtasia.svg",
+      "size": 1375,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/camunda.svg",
+      "size": 2243,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/canva.svg",
+      "size": 4253,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/capacitorjs.svg",
+      "size": 1102,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/capcut.svg",
+      "size": 647,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/cassandra.svg",
+      "size": 22329,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/chakraui.svg",
+      "size": 1738,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/chartjs.svg",
+      "size": 1322,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/chatgpt.svg",
+      "size": 4451,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/chromium.svg",
+      "size": 2150,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/circleci.svg",
+      "size": 1028,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/civitai.svg",
+      "size": 1189,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/claudeai.svg",
+      "size": 2801,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/clerk.svg",
+      "size": 1515,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/clickhouse.svg",
+      "size": 1464,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/cline.svg",
+      "size": 2324,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/clion.svg",
+      "size": 3344,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/clojure.svg",
+      "size": 2920,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/cloudflare.svg",
+      "size": 1967,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/cloudinary.svg",
+      "size": 4295,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/cmake.svg",
+      "size": 660,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/codeberg.svg",
+      "size": 860,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/codecov.svg",
+      "size": 2083,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/codeforces.svg",
+      "size": 1021,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/codegeex.svg",
+      "size": 2675,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/codeigniter.svg",
+      "size": 1494,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/codepen.svg",
+      "size": 3954,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/coffeescript.svg",
+      "size": 2992,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/cohere.svg",
+      "size": 2115,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/comfyui.svg",
+      "size": 1626,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/commitlint.svg",
+      "size": 1745,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/confluence.svg",
+      "size": 2694,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/cookiecutter.svg",
+      "size": 1514,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/coolify.svg",
+      "size": 866,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/coze.svg",
+      "size": 3235,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/cpanel.svg",
+      "size": 2235,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/cpp.svg",
+      "size": 872,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/crusoe.svg",
+      "size": 811,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/crystal.svg",
+      "size": 765,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/csharp.svg",
+      "size": 1061,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/css.svg",
+      "size": 2310,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/css3.svg",
+      "size": 506,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/cucumber.svg",
+      "size": 2966,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/curseforge.svg",
+      "size": 796,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/cursor.svg",
+      "size": 1326,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/cypress.svg",
+      "size": 2795,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/d3js.svg",
+      "size": 2317,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/dailydev.svg",
+      "size": 1793,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/daisyui.svg",
+      "size": 1091,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/dart.svg",
+      "size": 2217,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/databricks.svg",
+      "size": 828,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/datadog.svg",
+      "size": 5122,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/datagrip.svg",
+      "size": 4011,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/datalore.svg",
+      "size": 2918,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/datefns.svg",
+      "size": 1274,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/dbeaver.svg",
+      "size": 6365,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/dbt.svg",
+      "size": 2315,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/debian.svg",
+      "size": 5700,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/deepseek.svg",
+      "size": 4156,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/deno.svg",
+      "size": 3706,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/designali.svg",
+      "size": 552,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/devto.svg",
+      "size": 1021,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/digitalocean.svg",
+      "size": 756,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/directus.svg",
+      "size": 1923,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/discord.svg",
+      "size": 2992,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/discordbots.svg",
+      "size": 2797,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/discordjs.svg",
+      "size": 4749,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/disqus.svg",
+      "size": 914,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/django.svg",
+      "size": 907,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/djangorestframework.svg",
+      "size": 33346,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/dlang.svg",
+      "size": 1856,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/dndkit.svg",
+      "size": 597,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/dnspy.svg",
+      "size": 962,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/docker.svg",
+      "size": 4778,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/docus.svg",
+      "size": 980,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/docusaurus.svg",
+      "size": 46773,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/dotnet.svg",
+      "size": 1347,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/drizzle.svg",
+      "size": 1384,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/dropbox.svg",
+      "size": 486,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/drupal.svg",
+      "size": 1834,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/duckdb.svg",
+      "size": 947,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/easybuild.svg",
+      "size": 5189,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/eclipseide.svg",
+      "size": 3118,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/edge.svg",
+      "size": 6620,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/ejs.svg",
+      "size": 2849,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/elasticsearch.svg",
+      "size": 1239,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/electron.svg",
+      "size": 6814,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/element.svg",
+      "size": 3583,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/elementplus.svg",
+      "size": 1937,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/elixir.svg",
+      "size": 4311,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/elysiajs.svg",
+      "size": 7846,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/emberjs.svg",
+      "size": 1261,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/erlang.svg",
+      "size": 788,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/esbuild.svg",
+      "size": 709,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/eslint.svg",
+      "size": 1750,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/etcd.svg",
+      "size": 2861,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/eventbridge.svg",
+      "size": 3317,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/expo.svg",
+      "size": 856,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/expressjs.svg",
+      "size": 2154,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/facebook.svg",
+      "size": 569,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/fastapi.svg",
+      "size": 635,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/fastify.svg",
+      "size": 2059,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/fdroid.svg",
+      "size": 8066,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/featuresliceddesign.svg",
+      "size": 1228,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/fedora.svg",
+      "size": 2330,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/fiber.svg",
+      "size": 2511,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/figma.svg",
+      "size": 1706,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/filezilla.svg",
+      "size": 841,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/filmora.svg",
+      "size": 413,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/firebase.svg",
+      "size": 1596,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/firefox.svg",
+      "size": 15740,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/fivetran.svg",
+      "size": 2050,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/flask.svg",
+      "size": 2214,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/fleet.svg",
+      "size": 5496,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/flowbite.svg",
+      "size": 6286,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/flutter.svg",
+      "size": 1542,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/flutterflow.svg",
+      "size": 2656,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/flyio.svg",
+      "size": 6926,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/forem.svg",
+      "size": 837,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/fortran.svg",
+      "size": 1061,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/framer.svg",
+      "size": 278,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/freebsd.svg",
+      "size": 4631,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/freecad.svg",
+      "size": 1579,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/fresh.svg",
+      "size": 3039,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/fsharp.svg",
+      "size": 600,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/ganache.svg",
+      "size": 3849,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gatsby.svg",
+      "size": 920,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/geany.svg",
+      "size": 17563,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/ghostty.svg",
+      "size": 3324,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gimp.svg",
+      "size": 15198,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gin.svg",
+      "size": 74333,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/git.svg",
+      "size": 1179,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gitbash.svg",
+      "size": 2956,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gitbook.svg",
+      "size": 2434,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gitea.svg",
+      "size": 4274,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/github.svg",
+      "size": 1540,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/githubactions.svg",
+      "size": 8328,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/githubcopilot.svg",
+      "size": 3494,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/githubpages.svg",
+      "size": 10911,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gitkraken.svg",
+      "size": 4099,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gitlab.svg",
+      "size": 2005,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gitlocalize.svg",
+      "size": 2108,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gitmind.svg",
+      "size": 5804,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gitpod.svg",
+      "size": 1370,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gleam.svg",
+      "size": 4675,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gmail.svg",
+      "size": 873,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gnu.svg",
+      "size": 27288,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/godot.svg",
+      "size": 4455,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/goland.svg",
+      "size": 4527,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/golang.svg",
+      "size": 2819,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/googleadk.svg",
+      "size": 10560,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/googleadsense.svg",
+      "size": 1732,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/googlechrome.svg",
+      "size": 2221,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/googlecloud.svg",
+      "size": 2612,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/googlecolaboratory.svg",
+      "size": 2496,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/googledrive.svg",
+      "size": 1459,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/googlegemini.svg",
+      "size": 6359,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/googleidx.svg",
+      "size": 2172,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gorm.svg",
+      "size": 33396,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gradle.svg",
+      "size": 3294,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/grafana.svg",
+      "size": 9439,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/graphql.svg",
+      "size": 3039,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gridsome.svg",
+      "size": 2939,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/grok.svg",
+      "size": 1023,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/groovy.svg",
+      "size": 72079,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/groq.svg",
+      "size": 789,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/grpc.svg",
+      "size": 18856,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gruntjs.svg",
+      "size": 27601,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/gsap.svg",
+      "size": 26394,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/hackthebox.svg",
+      "size": 1921,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/hacs.svg",
+      "size": 3167,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/handycontrols.svg",
+      "size": 2832,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/hashnode.svg",
+      "size": 1080,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/haskell.svg",
+      "size": 695,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/haxe.svg",
+      "size": 1513,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/headlessui.svg",
+      "size": 2985,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/heroku.svg",
+      "size": 1132,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/heroui.svg",
+      "size": 1478,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/hexo.svg",
+      "size": 742,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/hibernate.svg",
+      "size": 713,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/homeassistant.svg",
+      "size": 1715,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/homebrew.svg",
+      "size": 15988,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/hono.svg",
+      "size": 1402,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/hoppscotch.svg",
+      "size": 5882,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/hostgator.svg",
+      "size": 10836,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/html.svg",
+      "size": 508,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/httpie.svg",
+      "size": 1518,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/hub.svg",
+      "size": 3529,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/huggingface.svg",
+      "size": 35579,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/hugo.svg",
+      "size": 2443,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/hyper.svg",
+      "size": 9377,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/iceberg.svg",
+      "size": 7000,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/ifttt.svg",
+      "size": 721,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/inertiajs.svg",
+      "size": 594,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/influxdb.svg",
+      "size": 3289,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/inkscape.svg",
+      "size": 24484,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/insomnia.svg",
+      "size": 929,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/instagram.svg",
+      "size": 3525,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/intellijidea.svg",
+      "size": 2551,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/ionic.svg",
+      "size": 1841,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/ios.svg",
+      "size": 1636,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/jakartaee.svg",
+      "size": 845,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/jamstack.svg",
+      "size": 1184,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/jasmine.svg",
+      "size": 1594,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/java.svg",
+      "size": 2525,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/javascript.svg",
+      "size": 1122,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/javascriptregistry.svg",
+      "size": 745,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/jenkins.svg",
+      "size": 24131,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/jest.svg",
+      "size": 5507,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/jetpackcompose.svg",
+      "size": 6055,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/jira.svg",
+      "size": 1407,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/jitsi.svg",
+      "size": 6086,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/joomla.svg",
+      "size": 1598,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/jotai.svg",
+      "size": 53076,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/jquery.svg",
+      "size": 11854,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/json.svg",
+      "size": 1584,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/julia.svg",
+      "size": 9460,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/junit4.svg",
+      "size": 6658,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/junit5.svg",
+      "size": 7607,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/jupyter.svg",
+      "size": 7069,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/jwt.svg",
+      "size": 1639,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/k3s.svg",
+      "size": 2753,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/kafka.svg",
+      "size": 2397,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/kaggle.svg",
+      "size": 788,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/kalilinux.svg",
+      "size": 12580,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/kepware.svg",
+      "size": 745,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/keras.svg",
+      "size": 1340,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/keycloak.svg",
+      "size": 1941,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/kotlin.svg",
+      "size": 701,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/ktor.svg",
+      "size": 730,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/kubernetes.svg",
+      "size": 6867,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/langchain.svg",
+      "size": 4675,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/laravel.svg",
+      "size": 3448,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/latex.svg",
+      "size": 10862,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/leaflet.svg",
+      "size": 2143,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/leetcode.svg",
+      "size": 1817,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/lemonsqueezy.svg",
+      "size": 1208,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/less.svg",
+      "size": 6648,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/librepcb.svg",
+      "size": 2561,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/linkedin.svg",
+      "size": 708,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/linux.svg",
+      "size": 2705,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/linuxmint.svg",
+      "size": 2134,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/litestar.svg",
+      "size": 2206,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/litmus.svg",
+      "size": 553,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/livewire.svg",
+      "size": 4859,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/llamaindex.svg",
+      "size": 2853,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/lmstudio.svg",
+      "size": 5392,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/logto.svg",
+      "size": 2132,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/lokalise.svg",
+      "size": 433,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/loki.svg",
+      "size": 5080,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/lookerstudio.svg",
+      "size": 2052,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/lottiefiles.svg",
+      "size": 600,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/lua.svg",
+      "size": 8250,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/lucia.svg",
+      "size": 390,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/lucide.svg",
+      "size": 1014,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/lynxjs.svg",
+      "size": 1847,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/macos.svg",
+      "size": 1889,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/magicui.svg",
+      "size": 4408,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/mambaui.svg",
+      "size": 1924,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/manifoldjs.svg",
+      "size": 3577,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/manjaro.svg",
+      "size": 321,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/mapbox.svg",
+      "size": 695,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/mariadb.svg",
+      "size": 3813,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/markdown.svg",
+      "size": 851,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/mastodon.svg",
+      "size": 1929,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/materialdesign.svg",
+      "size": 659,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/materialui.svg",
+      "size": 3783,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/matlab.svg",
+      "size": 2325,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/medium.svg",
+      "size": 772,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/medusa.svg",
+      "size": 1157,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/mermaid.svg",
+      "size": 812,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/metasploit.svg",
+      "size": 1134,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/microsoftcopilot.svg",
+      "size": 4769,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/milligram.svg",
+      "size": 1458,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/mimir.svg",
+      "size": 1311,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/minimax.svg",
+      "size": 5136,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/minio.svg",
+      "size": 1823,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/mongodb.svg",
+      "size": 1123,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/motherduck.svg",
+      "size": 2039,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/motion.svg",
+      "size": 594,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/mqtt.svg",
+      "size": 577,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/msdos.svg",
+      "size": 8607,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/myshellai.svg",
+      "size": 1511,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/mysql.svg",
+      "size": 4232,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/n8n.svg",
+      "size": 3536,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/navicat.svg",
+      "size": 4488,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/neo4j.svg",
+      "size": 2044,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/neon.svg",
+      "size": 3100,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/neovim.svg",
+      "size": 1613,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/nestjs.svg",
+      "size": 11293,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/netbeans.svg",
+      "size": 1454,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/netlify.svg",
+      "size": 2624,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/newrelic.svg",
+      "size": 743,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/nextdns.svg",
+      "size": 1093,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/nextjs.svg",
+      "size": 711,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/nginx.svg",
+      "size": 738,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/ngrok.svg",
+      "size": 437,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/nim.svg",
+      "size": 1443,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/nitro.svg",
+      "size": 1465,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/nixos.svg",
+      "size": 1928,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/nodejs.svg",
+      "size": 2393,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/nodered.svg",
+      "size": 1787,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/nomad.svg",
+      "size": 555,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/notepadplusplus.svg",
+      "size": 29654,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/notion.svg",
+      "size": 1893,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/npm.svg",
+      "size": 262,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/nuget.svg",
+      "size": 1016,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/numpy.svg",
+      "size": 1511,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/nunjucks.svg",
+      "size": 1233,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/nuxtjs.svg",
+      "size": 1435,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/obs.svg",
+      "size": 1566,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/obsidian.svg",
+      "size": 7245,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/obtainium.svg",
+      "size": 2196,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/ocaml.svg",
+      "size": 4173,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/ollama.svg",
+      "size": 8818,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/onyx.svg",
+      "size": 3501,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/openlayers.svg",
+      "size": 1801,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/openondemand.svg",
+      "size": 1099,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/opentelemetry.svg",
+      "size": 3073,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/openvpn.svg",
+      "size": 1002,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/openweather.svg",
+      "size": 3377,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/openwebui.svg",
+      "size": 1298,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/opera.svg",
+      "size": 1872,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/oracle.svg",
+      "size": 6858,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/overleaf.svg",
+      "size": 1374,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/p4.svg",
+      "size": 1946,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/pandacss.svg",
+      "size": 1925,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/pandas.svg",
+      "size": 844,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/parcel.svg",
+      "size": 17358,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/passportjs.svg",
+      "size": 924,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/payload.svg",
+      "size": 556,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/penpot.svg",
+      "size": 1552,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/pentahopdi.svg",
+      "size": 3463,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/perplexity.svg",
+      "size": 761,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/phoenix.svg",
+      "size": 5017,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/php.svg",
+      "size": 1867,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/phpstorm.svg",
+      "size": 4499,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/pinia.svg",
+      "size": 5993,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/pinterest.svg",
+      "size": 1412,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/pkgroll.svg",
+      "size": 169397,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/platformio.svg",
+      "size": 4242,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/plausible.svg",
+      "size": 1502,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/playwright.svg",
+      "size": 5331,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/pnpm.svg",
+      "size": 883,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/pocketbase.svg",
+      "size": 5011,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/podman.svg",
+      "size": 13119,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/polars.svg",
+      "size": 34649,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/postcss.svg",
+      "size": 38033,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/postgresql.svg",
+      "size": 7702,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/posthog.svg",
+      "size": 3301,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/postman.svg",
+      "size": 8305,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/powerbi.svg",
+      "size": 1553,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/powershell.svg",
+      "size": 2422,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/preact.svg",
+      "size": 1903,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/prettier.svg",
+      "size": 9934,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/primevue.svg",
+      "size": 2449,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/prisma.svg",
+      "size": 720,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/prismic.svg",
+      "size": 5025,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/procure.svg",
+      "size": 1360,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/prometheus.svg",
+      "size": 1260,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/protoncalendar.svg",
+      "size": 2534,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/protondrive.svg",
+      "size": 1548,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/protonmail.svg",
+      "size": 1773,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/protonpass.svg",
+      "size": 4259,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/protonvpn.svg",
+      "size": 1433,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/protonwallet.svg",
+      "size": 2683,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/proxmox.svg",
+      "size": 1689,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/psycopg.svg",
+      "size": 19790,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/pug.svg",
+      "size": 12117,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/pulumi.svg",
+      "size": 2876,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/puppeteer.svg",
+      "size": 9409,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/pwa.svg",
+      "size": 1226,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/pycharm.svg",
+      "size": 4024,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/pygame.svg",
+      "size": 54208,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/pypi.svg",
+      "size": 6322,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/pyramid.svg",
+      "size": 4932,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/pytest.svg",
+      "size": 1119,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/python.svg",
+      "size": 2213,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/pytorch.svg",
+      "size": 942,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/pytorch3d.svg",
+      "size": 975,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/qdrant.svg",
+      "size": 1733,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/qtwidgets.svg",
+      "size": 1698,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/quasar.svg",
+      "size": 3223,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/qubesos.svg",
+      "size": 2855,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/qwik.svg",
+      "size": 1335,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/r.svg",
+      "size": 1662,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/rabbitmq.svg",
+      "size": 3157,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/radixui.svg",
+      "size": 1006,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/railway.svg",
+      "size": 1460,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/raspberrypi.svg",
+      "size": 7491,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/raylib.svg",
+      "size": 4206,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/reactdatepicker.svg",
+      "size": 9447,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/reacthookform.svg",
+      "size": 4538,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/reactjs.svg",
+      "size": 5155,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/reactnative.svg",
+      "size": 9197,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/reactquery.svg",
+      "size": 9125,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/reactrouter.svg",
+      "size": 2129,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/readthedocs.svg",
+      "size": 4235,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/reddit.svg",
+      "size": 8072,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/redis.svg",
+      "size": 3557,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/redux.svg",
+      "size": 2288,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/refine.svg",
+      "size": 1163,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/regex.svg",
+      "size": 3682,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/reglejs.svg",
+      "size": 1262,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/rekaui.svg",
+      "size": 3377,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/render.svg",
+      "size": 970,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/replit.svg",
+      "size": 976,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/resend.svg",
+      "size": 908,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/rest.svg",
+      "size": 7416,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/revolt.svg",
+      "size": 710,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/rider.svg",
+      "size": 4195,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/rocketmq.svg",
+      "size": 5115,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/rolldown.svg",
+      "size": 1228,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/rollupjs.svg",
+      "size": 4493,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/ruby.svg",
+      "size": 8362,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/rubymine.svg",
+      "size": 3092,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/rust.svg",
+      "size": 14234,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/rxjs.svg",
+      "size": 5257,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/sanity.svg",
+      "size": 1136,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/sap.svg",
+      "size": 1912,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/sass.svg",
+      "size": 2440,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/scala.svg",
+      "size": 2111,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/scikitlearn.svg",
+      "size": 10737,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/semanticui.svg",
+      "size": 983,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/sentry.svg",
+      "size": 2025,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/sequelize.svg",
+      "size": 3796,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/serverless.svg",
+      "size": 690,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/servicenow.svg",
+      "size": 1664,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/session.svg",
+      "size": 1988,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/seyfert.svg",
+      "size": 36481,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/shadcnui.svg",
+      "size": 888,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/shiki.svg",
+      "size": 2444,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/shopify.svg",
+      "size": 2599,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/signal.svg",
+      "size": 3140,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/simpledirectmedialayer.svg",
+      "size": 24493,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/singlespa.svg",
+      "size": 680,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/singularity.svg",
+      "size": 1511,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/skeletonui.svg",
+      "size": 5427,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/sketch.svg",
+      "size": 1268,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/slack.svg",
+      "size": 1954,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/slidev.svg",
+      "size": 2088,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/slint.svg",
+      "size": 1086,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/slurm.svg",
+      "size": 18041,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/snipcart.svg",
+      "size": 1698,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/snowflake.svg",
+      "size": 5528,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/snyk.svg",
+      "size": 9894,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/soap.svg",
+      "size": 8911,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/socketio.svg",
+      "size": 1327,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/solidity.svg",
+      "size": 1041,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/solidjs.svg",
+      "size": 2900,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/solr.svg",
+      "size": 1367,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/soundbridge.svg",
+      "size": 1461,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/spark.svg",
+      "size": 8837,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/sphinx.svg",
+      "size": 1616,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/springboot.svg",
+      "size": 2096,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/spyder.svg",
+      "size": 3780,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/sqlalchemy.svg",
+      "size": 4300,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/sqlite.svg",
+      "size": 2362,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/sqlserver.svg",
+      "size": 9067,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/sst.svg",
+      "size": 5090,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/stackblitz.svg",
+      "size": 286,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/stackoverflow.svg",
+      "size": 864,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/stanjs.svg",
+      "size": 10039,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/starlight.svg",
+      "size": 5100,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/stata.svg",
+      "size": 3160,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/steam.svg",
+      "size": 2405,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/stimulus.svg",
+      "size": 2458,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/storyblok.svg",
+      "size": 1493,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/storybook.svg",
+      "size": 2017,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/strapi.svg",
+      "size": 819,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/streamlit.svg",
+      "size": 1855,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/stride.svg",
+      "size": 823,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/stripe.svg",
+      "size": 2177,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/styledcomponents.svg",
+      "size": 6045,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/sublime.svg",
+      "size": 1374,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/suitecrm.svg",
+      "size": 9921,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/supabase.svg",
+      "size": 905,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/surrealdb.svg",
+      "size": 1557,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/svelte.svg",
+      "size": 3521,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/svg.svg",
+      "size": 4856,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/swagger.svg",
+      "size": 3460,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/swc.svg",
+      "size": 5564,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/swift.svg",
+      "size": 1095,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/swiftui.svg",
+      "size": 2970,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/swiper.svg",
+      "size": 3209,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/swr.svg",
+      "size": 16777,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/t0ggles.svg",
+      "size": 1722,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/tabby.svg",
+      "size": 2613,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/tableau.svg",
+      "size": 1458,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/tailwindcss.svg",
+      "size": 1076,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/tailwindmerge.svg",
+      "size": 3635,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/tanstack.svg",
+      "size": 15610,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/targon.svg",
+      "size": 2050,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/tauri.svg",
+      "size": 3071,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/telegram.svg",
+      "size": 1740,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/tempo.svg",
+      "size": 2386,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/tensorflow.svg",
+      "size": 1114,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/terraform.svg",
+      "size": 743,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/testcontainers.svg",
+      "size": 1295,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/threads.svg",
+      "size": 1961,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/threejs.svg",
+      "size": 2308,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/thunderbird.svg",
+      "size": 13947,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/tinacms.svg",
+      "size": 1432,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/tinyhttp.svg",
+      "size": 3285,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/trae.svg",
+      "size": 226,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/traefik.svg",
+      "size": 20492,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/trello.svg",
+      "size": 812,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/trpc.svg",
+      "size": 1375,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/truenascore.svg",
+      "size": 932,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/truenasenterprise.svg",
+      "size": 1264,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/truenasscale.svg",
+      "size": 2180,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/turso.svg",
+      "size": 1454,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/twilio.svg",
+      "size": 1362,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/twine.svg",
+      "size": 931,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/twitter.svg",
+      "size": 1068,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/typeorm.svg",
+      "size": 13993,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/typescript.svg",
+      "size": 1776,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/ubuntu.svg",
+      "size": 2409,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/udemy.svg",
+      "size": 1130,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/umami.svg",
+      "size": 11469,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/umbraco.svg",
+      "size": 2727,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/unity.svg",
+      "size": 1872,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/unocss.svg",
+      "size": 1081,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/unrealengine.svg",
+      "size": 2898,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/upstageai.svg",
+      "size": 1277,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/upstash.svg",
+      "size": 1753,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/v0.svg",
+      "size": 1037,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vagrant.svg",
+      "size": 1006,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vala.svg",
+      "size": 4362,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/valibot.svg",
+      "size": 3106,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vanillaos.svg",
+      "size": 6471,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vaxee.svg",
+      "size": 890,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vegaspro.svg",
+      "size": 577,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/veracrypt.svg",
+      "size": 5112,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vercel.svg",
+      "size": 439,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vhdl.svg",
+      "size": 1322,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/videojs.svg",
+      "size": 5808,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vike.svg",
+      "size": 7042,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vim.svg",
+      "size": 1063,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/virtualbox.svg",
+      "size": 1230,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/visualstudio.svg",
+      "size": 3821,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/visualstudiocode.svg",
+      "size": 1378,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vite.svg",
+      "size": 1728,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vitepress.svg",
+      "size": 3671,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vitepwa.svg",
+      "size": 2958,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vitest.svg",
+      "size": 2591,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vivaldi.svg",
+      "size": 1186,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vk.svg",
+      "size": 506,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vlitejs.svg",
+      "size": 1492,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vmix.svg",
+      "size": 928,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vmware.svg",
+      "size": 2357,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vuefire.svg",
+      "size": 745,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vueform.svg",
+      "size": 912,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vuejs.svg",
+      "size": 558,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vuepress.svg",
+      "size": 6546,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vuetify.svg",
+      "size": 703,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/vueuse.svg",
+      "size": 1077,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/weaviate.svg",
+      "size": 5090,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/webassembly.svg",
+      "size": 537,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/weblate.svg",
+      "size": 3874,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/websocket.svg",
+      "size": 827,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/webstorm.svg",
+      "size": 4000,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/webstudio.svg",
+      "size": 16126,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/whatsapp.svg",
+      "size": 2111,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/windicss.svg",
+      "size": 3225,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/windows.svg",
+      "size": 484,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/windowsappsdk.svg",
+      "size": 10566,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/windsurf.svg",
+      "size": 1406,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/winui.svg",
+      "size": 6841,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/woocommerce.svg",
+      "size": 1687,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/wordpress.svg",
+      "size": 1780,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/x.svg",
+      "size": 418,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/xamarin.svg",
+      "size": 1543,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/xaml.svg",
+      "size": 22190,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/xampp.svg",
+      "size": 4267,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/xcode.svg",
+      "size": 30619,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/xftp.svg",
+      "size": 4796,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/xshell.svg",
+      "size": 2023,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/yaak.svg",
+      "size": 1922,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/yaml.svg",
+      "size": 1006,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/yandexen.svg",
+      "size": 443,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/yandexru.svg",
+      "size": 487,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/yarn.svg",
+      "size": 3469,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/yolo.svg",
+      "size": 1391,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/youtube.svg",
+      "size": 937,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/zeabur.svg",
+      "size": 653,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/zed.svg",
+      "size": 1397,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/zen.svg",
+      "size": 1544,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/zig.svg",
+      "size": 632,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/zod.svg",
+      "size": 950,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/zorinos.svg",
+      "size": 416,
+      "extension": ".svg"
+    },
+    {
+      "path": "icons/zustand.svg",
+      "size": 280329,
+      "extension": ".svg"
+    },
+    {
+      "path": "package.json",
+      "size": 656,
+      "extension": ".json"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "size": 75896,
+      "extension": ".yaml"
+    },
+    {
+      "path": "src/index.ts",
+      "size": 2274,
+      "extension": ".ts"
+    },
+    {
+      "path": "src/routes/index.ts",
+      "size": 6744,
+      "extension": ".ts"
+    },
+    {
+      "path": "src/utils/index.ts",
+      "size": 1919,
+      "extension": ".ts"
+    },
+    {
+      "path": "tsconfig.json",
+      "size": 527,
+      "extension": ".json"
+    },
+    {
+      "path": "vercel.json",
+      "size": 238,
+      "extension": ".json"
+    }
+  ],
+  "package_json": {
+    "name": "skills-icons",
+    "private": true,
+    "main": "dist/index.js",
+    "scripts": {
+      "dev": "tsx watch src/index.ts",
+      "start": "node dist/index.js",
+      "build": "tsc"
+    },
+    "dependencies": {
+      "cheerio": "^1.1.0",
+      "cors": "^2.8.5",
+      "express": "^4.21.1",
+      "helmet": "^8.0.0",
+      "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+      "@types/cors": "^2.8.17",
+      "@types/express": "^4.17.21",
+      "@types/morgan": "^1.9.9",
+      "@types/node": "^22.10.2",
+      "@vercel/node": "^5.0.0",
+      "tsx": "^4.7.0"
+    },
+    "author": "syvixor",
+    "license": "MIT"
+  }
+}

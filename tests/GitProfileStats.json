@@ -1,0 +1,159 @@
+{
+  "owner": "insanerest",
+  "repo": "GitProfileStats",
+  "pushed_at": "2025-07-08T16:44:44Z",
+  "scanned_at": "2025-07-21T22:12:20.827Z",
+  "files": [
+    {
+      "path": ".DS_Store",
+      "size": 6148,
+      "extension": ""
+    },
+    {
+      "path": "LICENSE",
+      "size": 1066,
+      "extension": ""
+    },
+    {
+      "path": "README.md",
+      "size": 1025,
+      "extension": ".md"
+    },
+    {
+      "path": "docs/.gitignore",
+      "size": 253,
+      "extension": ""
+    },
+    {
+      "path": "docs/API/api.js",
+      "size": 1793,
+      "extension": ".js"
+    },
+    {
+      "path": "docs/README.md",
+      "size": 809,
+      "extension": ".md"
+    },
+    {
+      "path": "docs/components.json",
+      "size": 424,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/eslint.config.js",
+      "size": 951,
+      "extension": ".js"
+    },
+    {
+      "path": "docs/index.html",
+      "size": 466,
+      "extension": ".html"
+    },
+    {
+      "path": "docs/jsconfig.json",
+      "size": 97,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/package-lock.json",
+      "size": 143481,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/package.json",
+      "size": 1064,
+      "extension": ".json"
+    },
+    {
+      "path": "docs/public/Layout.css",
+      "size": 1529,
+      "extension": ".css"
+    },
+    {
+      "path": "docs/public/Layout.jsx",
+      "size": 834,
+      "extension": ".jsx"
+    },
+    {
+      "path": "docs/src/App.css",
+      "size": 4814,
+      "extension": ".css"
+    },
+    {
+      "path": "docs/src/App.jsx",
+      "size": 683,
+      "extension": ".jsx"
+    },
+    {
+      "path": "docs/src/assets/GHPSLogo.jpeg",
+      "size": 233270,
+      "extension": ".jpeg"
+    },
+    {
+      "path": "docs/src/assets/react.svg",
+      "size": 4126,
+      "extension": ".svg"
+    },
+    {
+      "path": "docs/src/components/About.css",
+      "size": 560,
+      "extension": ".css"
+    },
+    {
+      "path": "docs/src/components/About.jsx",
+      "size": 1715,
+      "extension": ".jsx"
+    },
+    {
+      "path": "docs/src/components/Home.jsx",
+      "size": 2683,
+      "extension": ".jsx"
+    },
+    {
+      "path": "docs/src/components/Profile.jsx",
+      "size": 9380,
+      "extension": ".jsx"
+    },
+    {
+      "path": "docs/src/components/ui/button.jsx",
+      "size": 2000,
+      "extension": ".jsx"
+    },
+    {
+      "path": "docs/src/components/ui/card.jsx",
+      "size": 1767,
+      "extension": ".jsx"
+    },
+    {
+      "path": "docs/src/components/ui/input.jsx",
+      "size": 939,
+      "extension": ".jsx"
+    },
+    {
+      "path": "docs/src/index.css",
+      "size": 1178,
+      "extension": ".css"
+    },
+    {
+      "path": "docs/src/lib/utils.js",
+      "size": 137,
+      "extension": ".js"
+    },
+    {
+      "path": "docs/src/main.jsx",
+      "size": 229,
+      "extension": ".jsx"
+    },
+    {
+      "path": "docs/src/searchPage.jsx",
+      "size": 1943,
+      "extension": ".jsx"
+    },
+    {
+      "path": "docs/vite.config.js",
+      "size": 435,
+      "extension": ".js"
+    }
+  ],
+  "package_json": null
+}
