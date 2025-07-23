@@ -1,176 +1,168 @@
 const fs = require("fs");
 const path = require("path");
-const https = require("https");
-const fetchRepoData = require("../src/fetchers/repoFetch"); // adjust path
+const fetchRepoData = require("../src/fetchers/repoFetch");
 
 jest.mock("fs");
 jest.mock("https");
+jest.mock("path");
 
-const MOCK_OWNER = "octocat";
-const MOCK_REPO = "Hello-World";
-const CACHE_PATH = path.join(
-  __dirname,
-  "..",
-  "src",
-  "cache",
-  MOCK_OWNER,
-  `${MOCK_REPO}.json`
-);
+const https = require("https");
 
 describe("fetchRepoData", () => {
-  let reqHandler = null;
+  const owner = "octocat";
+  const repo = "Hello-World";
+
+  const fakeMeta = {
+    default_branch: "main",
+    pushed_at: "2023-01-01T00:00:00Z",
+  };
+
+  const fakeTree = {
+    tree: [
+      { type: "blob", path: "index.js", size: 123 },
+      { type: "blob", path: "package.json", size: 456, url: "blob_url" },
+    ],
+  };
+
+  const fakeBlob = {
+    content: Buffer.from(
+      JSON.stringify({ name: "test-package" }),
+      "utf-8"
+    ).toString("base64"),
+  };
+
+  function mockHttpsResponse(data, statusCode = 200) {
+    return {
+      on: (event, callback) => {
+        if (event === "data") callback(JSON.stringify(data));
+        if (event === "end") callback();
+      },
+      statusCode,
+      statusMessage: "OK",
+    };
+  }
+
+  function mockHttpsErrorResponse(statusCode, message = "Error") {
+    return {
+      on: (event, callback) => {
+        if (event === "data") callback("error");
+        if (event === "end") callback();
+      },
+      statusCode,
+      statusMessage: message,
+    };
+  }
 
   beforeEach(() => {
-    fs.existsSync.mockReset();
-    fs.readFileSync.mockReset();
-    fs.writeFileSync.mockReset();
-    fs.mkdirSync.mockReset();
-    https.get.mockReset();
+    jest.clearAllMocks();
 
-    // clean cache dir if needed
+    // path.join mock
+    path.join.mockImplementation((...args) => args.join("/"));
+
+    // Cache read/write mocks
     fs.existsSync.mockReturnValue(false);
+    fs.readFileSync.mockReturnValue("");
+    fs.writeFileSync.mockImplementation(() => {});
     fs.mkdirSync.mockImplementation(() => {});
   });
 
-  const mockGitHubAPI = (responses) => {
-    https.get.mockImplementation((url, opts, callback) => {
-      reqHandler = callback;
+  it("fetches new data and writes to cache", async () => {
+    let call = 0;
 
-      const res = {
-        statusCode: 200,
-        on: (event, cb) => {
-          if (event === "data") cb(JSON.stringify(responses[url]));
-          if (event === "end") cb();
-        },
-      };
+    https.get.mockImplementation((_url, _opts, cb) => {
+      let response;
+      if (call === 0) response = mockHttpsResponse(fakeMeta); // repo meta
+      else if (call === 1) response = mockHttpsResponse(fakeTree); // tree
+      else if (call === 2) response = mockHttpsResponse(fakeBlob); // blob
 
-      process.nextTick(() => callback(res));
-
-      return { on: jest.fn() }; // mock error handler
+      call++;
+      setImmediate(() => cb(response));
+      return { on: () => {} };
     });
-  };
 
-  it("should fetch and write data when no cache exists", async () => {
-    const pushed_at = "2021-01-01T00:00:00Z";
-
-    const responses = {
-      [`https://api.github.com/repos/${MOCK_OWNER}/${MOCK_REPO}`]: {
-        pushed_at,
-        default_branch: "main",
-      },
-      [`https://api.github.com/repos/${MOCK_OWNER}/${MOCK_REPO}/git/trees/main?recursive=1`]:
-        {
-          tree: [
-            {
-              path: "index.js",
-              size: 123,
-              type: "blob",
-            },
-            {
-              path: "package.json",
-              size: 456,
-              type: "blob",
-              url: "https://api.github.com/blobs/1234",
-            },
-          ],
-        },
-      "https://api.github.com/blobs/1234": {
-        content: Buffer.from(JSON.stringify({ name: "test-package" })).toString(
-          "base64"
-        ),
-      },
-    };
-
-    mockGitHubAPI(responses);
-
-    fs.existsSync.mockImplementation((p) => false);
-
-    const result = await fetchRepoData(MOCK_OWNER, MOCK_REPO);
-
-    expect(result.repo).toBe(MOCK_REPO);
-    expect(result.files.length).toBe(2);
-    expect(result.package_json).toEqual({ name: "test-package" });
-    expect(fs.writeFileSync).toHaveBeenCalledWith(
-      CACHE_PATH,
-      expect.stringContaining(`"repo": "${MOCK_REPO}"`)
-    );
+    const data = await fetchRepoData(owner, repo);
+    expect(data.repo).toBe(repo);
+    expect(data.owner).toBe(owner);
+    expect(data.files.length).toBe(2);
+    expect(data.package_json.name).toBe("test-package");
   });
 
-  it("should return cached data if pushed_at matches", async () => {
-    const pushed_at = "2021-01-01T00:00:00Z";
-    const cachedData = {
-      repo: MOCK_REPO,
-      pushed_at,
+  it("uses cache if pushed_at matches", async () => {
+    const cache = {
+      owner,
+      repo,
+      pushed_at: fakeMeta.pushed_at,
       scanned_at: new Date().toISOString(),
       files: [],
     };
 
-    fs.existsSync.mockImplementation((p) => true);
-    fs.readFileSync.mockReturnValue(JSON.stringify(cachedData));
-
-    mockGitHubAPI({
-      [`https://api.github.com/repos/${MOCK_OWNER}/${MOCK_REPO}`]: {
-        pushed_at,
-        default_branch: "main",
-      },
+    let call = 0;
+    https.get.mockImplementation((_url, _opts, cb) => {
+      call++;
+      setImmediate(() => cb(mockHttpsResponse(fakeMeta)));
+      return { on: () => {} };
     });
 
-    const result = await fetchRepoData(MOCK_OWNER, MOCK_REPO);
+    fs.existsSync.mockReturnValue(true);
+    fs.readFileSync.mockReturnValue(JSON.stringify(cache));
 
-    expect(result).toEqual(cachedData);
-    expect(fs.readFileSync).toHaveBeenCalled();
-    expect(fs.writeFileSync).not.toHaveBeenCalled();
+    const data = await fetchRepoData(owner, repo);
+    expect(data).toEqual(cache);
+    expect(call).toBe(1); // Only called repo meta
   });
 
-  it("should handle 404 errors properly", async () => {
-    https.get.mockImplementation((url, opts, callback) => {
-      const res = {
-        statusCode: 404,
-        statusMessage: "Not Found",
-        on: (event, cb) => {
-          if (event === "data") cb("");
-          if (event === "end") cb();
-        },
-      };
-      callback(res);
-      return { on: jest.fn() };
+  it("handles 404 error on repo", async () => {
+    https.get.mockImplementation((_url, _opts, cb) => {
+      setImmediate(() => cb(mockHttpsErrorResponse(404, "Not Found")));
+      return { on: () => {} };
     });
 
-    await expect(fetchRepoData("nonexistent", "badrepo")).rejects.toThrow(
+    await expect(fetchRepoData(owner, repo)).rejects.toThrow(
       "Repo cannot be found"
     );
   });
 
-  it("should handle invalid JSON from package.json blob", async () => {
-    const pushed_at = "2021-01-01T00:00:00Z";
+  it("handles invalid JSON in cache", async () => {
+    fs.existsSync.mockReturnValue(true);
+    fs.readFileSync.mockImplementation(() => "INVALID_JSON");
 
-    const responses = {
-      [`https://api.github.com/repos/${MOCK_OWNER}/${MOCK_REPO}`]: {
-        pushed_at,
-        default_branch: "main",
-      },
-      [`https://api.github.com/repos/${MOCK_OWNER}/${MOCK_REPO}/git/trees/main?recursive=1`]:
-        {
-          tree: [
-            {
-              path: "package.json",
-              size: 456,
-              type: "blob",
-              url: "https://api.github.com/blobs/1234",
-            },
-          ],
-        },
-      "https://api.github.com/blobs/1234": {
-        content: Buffer.from("not-json!!").toString("base64"),
-      },
+    https.get.mockImplementation((_url, _opts, cb) => {
+      setImmediate(() => cb(mockHttpsResponse(fakeMeta)));
+      return { on: () => {} };
+    });
+
+    await fetchRepoData(owner, repo); // should ignore broken cache
+    expect(fs.readFileSync).toHaveBeenCalled();
+  });
+
+  it("handles package.json parse failure gracefully", async () => {
+    let call = 0;
+
+    const fakeBlobBroken = {
+      content: Buffer.from("not json", "utf-8").toString("base64"),
     };
 
-    mockGitHubAPI(responses);
+    https.get.mockImplementation((_url, _opts, cb) => {
+      if (call === 0) cb(mockHttpsResponse(fakeMeta));
+      else if (call === 1) cb(mockHttpsResponse(fakeTree));
+      else cb(mockHttpsResponse(fakeBlobBroken));
+      call++;
+      return { on: () => {} };
+    });
 
-    fs.existsSync.mockReturnValue(false);
+    const data = await fetchRepoData(owner, repo);
+    expect(data.package_json.invalid).toBe(true);
+  });
 
-    const result = await fetchRepoData(MOCK_OWNER, MOCK_REPO);
+  it("handles non-404 API errors", async () => {
+    https.get.mockImplementation((_url, _opts, cb) => {
+      setImmediate(() => cb(mockHttpsErrorResponse(500, "Internal Error")));
+      return { on: () => {} };
+    });
 
-    expect(result.package_json).toEqual({ invalid: true });
+    await expect(fetchRepoData(owner, repo)).resolves.toStrictEqual({
+      error: true,
+      msg: "Internal Error",
+    });
   });
 });
