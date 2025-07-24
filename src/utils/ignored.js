@@ -5,5 +5,5 @@ module.exports = [
   "pnpm-lock.yaml",
   ".gitignore",
   "readme.md",
-  
+  "code_of_conduct.md",
 ];
