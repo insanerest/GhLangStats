@@ -21,6 +21,15 @@
 
 ## 📦 Installation
 
+You can install via npm:
+
+```bash
+npm install -g ghlangstats
+```
+
+or install manually:
+
+
 Clone the repository:
 
 ```bash
