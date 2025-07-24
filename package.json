@@ -1,6 +1,6 @@
 {
   "name": "ghlangstats",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a CLI to detect programming languages and frameworks used in a GitHub user’s public repositories.",
   "main": "./bin/cli.js",
   "bin": {
@@ -16,6 +16,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
+    "publishpkg": "git add . && git commit -m 'updated version' && git push origin main && npm publish && npm publish --registry=https://npm.pkg.github.com",
     "test": "jest --coverage",
     "linkcli": "node postinstall.js && echo 'Linking the package may take a few minutes' && npm link",
     "rmcli": "npm unlink -g ghlangstats",
