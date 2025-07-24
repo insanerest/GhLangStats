@@ -1,6 +1,6 @@
 {
-  "name": "@insanerest/ghlangstats",
-  "version": "1.0.0",
+  "name": "ghlangstats",
+  "version": "1.0.1",
   "description": "a CLI to detect programming languages and frameworks used in a GitHub user’s public repositories.",
   "main": "./bin/cli.js",
   "bin": {
@@ -11,6 +11,9 @@
       "./jest.setup.js"
     ],
     "testEnvironment": "node"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
     "test": "jest --coverage",
