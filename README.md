@@ -14,7 +14,6 @@
 - Analyze public repositories of any GitHub user  
 - Detect and summarize programming languages used  
 - Detect and summarize frameworks utilized  
-- Lightweight and easy to integrate API  
 - Command-line interface (CLI) for quick usage  
 
 ---
