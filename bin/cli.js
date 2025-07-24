@@ -2,6 +2,8 @@
 
 const { Command } = require("commander");
 const chalk = require("chalk");
+const path = require("path");
+const fs = require("fs");
 const extract = require("../src/utils/extractFromURL");
 const fetchRepoData = require("../src/fetchers/repoFetch");
 const detectLangsFromJSON = require("../src/detectors/detectorJSON");
@@ -9,6 +11,8 @@ const detectLangs = require("../src/detectors/detector");
 const getUserStats = require("../src/fetchers/getUserStats");
 const renderConsole = require("../src/formatters/console");
 const renderMarkdown = require("../src/formatters/markdown");
+const pkgPath = path.join(__dirname, "../package.json");
+const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf8"));
 
 const program = new Command();
 
@@ -36,7 +40,7 @@ function switchRender(outputType, data) {
 program
   .name("ghlangstats")
   .description("CLI to get language usage details in any GitHub repo")
-  .version("1.0.0")
+  .version(pkg.version)
   .option("-r, --repo <url>", "GitHub repository URL")
   .option("-d, --directory <path>", "Path to local project directory")
   .option("-u, --user <username>", "GitHub username to analyze")

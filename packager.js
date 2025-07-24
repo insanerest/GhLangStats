@@ -33,7 +33,7 @@ async function main() {
     const targetPath = path.resolve(process.cwd(), folderName);
 
     // Directories to copy
-    const dirsToCopy = ["src", "bin"];
+    const dirsToCopy = ["src", "bin", "node_modules"];
 
     // Files to copy
     const filesToCopy = [
