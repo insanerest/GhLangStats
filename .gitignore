@@ -5,3 +5,4 @@ gh.js
 .env
 coverage
 dist
+.npmrc
