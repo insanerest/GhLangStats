@@ -65,7 +65,7 @@ node bin/cli.js --help
 
 
 
-Read the [Documentation](https://github.com/insanerest/ghlangstats) (Coming Soon) for all the usage options
+Read the [Documentation](https://github.com/insanerest/GhLangStats/wiki) for all the usage options
 
 
 ---
