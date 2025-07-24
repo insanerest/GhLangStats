@@ -1,6 +1,6 @@
 {
   "name": "ghlangstats",
-  "version": "1.0.3",
+  "version": "1.0.1",
   "description": "a CLI to detect programming languages and frameworks used in a GitHub user’s public repositories.",
   "main": "./bin/cli.js",
   "bin": {
@@ -14,6 +14,9 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
+  },
+  "pkg": {
+    "assets": ["package.json", "src/cache/*.json"]
   },
   "scripts": {
     "publishpkg": "git add . && git commit -m 'updated version' && git push origin main && npm publish && npm publish --registry=https://npm.pkg.github.com",
