@@ -3,7 +3,12 @@ const path = require("path");
 const https = require("https");
 require("dotenv").config({ quiet: true, debug: false });
 
-const CACHE_DIR = path.resolve("src", "cache");
+const isPkg = typeof process.pkg !== "undefined";
+const BASE_DIR = isPkg
+  ? path.dirname(process.execPath) // runtime binary folder
+  : path.resolve(__dirname, "..", ".."); // project root in dev
+
+const CACHE_DIR = path.join(BASE_DIR, "src","cache");
 if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR);
 
 const GITHUB_API = "https://api.github.com";

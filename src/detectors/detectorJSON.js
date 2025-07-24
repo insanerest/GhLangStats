@@ -89,7 +89,6 @@ function detectLangsFromJSON(excluded, repoJSON) {
     }
 
     for (const fw of frameworkIndicators) {
-      console.log(file.path);
       if (fw.files.includes(ext)) frameworks.add(fw.name);
     }
   }
