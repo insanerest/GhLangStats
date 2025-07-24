@@ -4,21 +4,19 @@ const path = require("path");
 const shouldExclude = require("../utils/shouldExclude");
 
 const frameworkIndicators = [
-  { name: "React", match: ["react"], files: [".jsx", ".tsx"], config: [] },
-  { name: "Next.js", match: ["next"], files: [], config: ["next.config.js"] },
+  { name: "React", match: ["react"], files: [".jsx", ".tsx"] },
+  { name: "Next.js", match: ["next"], files: [] },
   {
     name: "Tailwind CSS",
     match: ["tailwindcss"],
     files: [],
-    config: ["tailwind.config.js"],
   },
-  { name: "Vue", match: ["vue"], files: [".vue"], config: [] },
-  { name: "Vite", match: ["vite"], files: [], config: ["vite.config.js"] },
+  { name: "Vue", match: ["vue"], files: [".vue"] },
+  { name: "Vite", match: ["vite"], files: [] },
   {
     name: "Svelte",
     match: ["svelte"],
     files: [".svelte"],
-    config: ["svelte.config.js"],
   },
 ];
 
@@ -33,10 +31,12 @@ function getJSONFile(path) {
     return JSON.parse(data);
   } catch (err) {
     console.error("Error reading the file:", err);
+    return { error: true, msg: "Invalid Path or JSON" };
   }
 }
 function detectLangsFromJSON(excluded, repoJSON) {
   const allFiles = getJSONFile(repoJSON);
+  if (allFiles.error) return allFiles;
   const languageStats = {};
   const otherStats = {};
   const frameworks = new Set();
@@ -57,7 +57,8 @@ function detectLangsFromJSON(excluded, repoJSON) {
       filePath.startsWith(".") ||
       filePath.includes("dist") ||
       filePath.includes("/test/") ||
-      filePath.includes("/tests/")
+      filePath.includes("/tests/") ||
+      filePath.includes("tests/")
     ) {
       continue;
     }
@@ -88,10 +89,7 @@ function detectLangsFromJSON(excluded, repoJSON) {
     }
 
     for (const fw of frameworkIndicators) {
-      if (fw.config.some((c) => file.path.endsWith(c))) {
-        frameworks.add(fw.name);
-        continue;
-      }
+      console.log(file.path);
       if (fw.files.includes(ext)) frameworks.add(fw.name);
     }
   }
