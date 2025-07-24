@@ -2,7 +2,7 @@
   "name": "ghlangstats",
   "version": "1.0.0",
   "description": "a CLI to detect programming languages and frameworks used in a GitHub user’s public repositories.",
-  "main": "cli.js",
+  "main": "./bin/cli.js",
   "bin": {
     "ghlangstats": "./bin/cli.js"
   },
@@ -22,9 +22,9 @@
     "type": "git",
     "url": "git+https://github.com/insanerest/GhLangStats.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["npm", "cli", "gh", "github", "stats", "langs", "languages", "gh", "nodejs"],
+  "author": "Abdullah Elwardany <aelwa001@hotmail.com>",
+  "license": "MIT",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/insanerest/GhLangStats/issues"
