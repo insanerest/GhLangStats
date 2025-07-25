@@ -14,36 +14,31 @@ function renderMarkdown(stats) {
 
   // Table Header
   md += `### 📊 Language Statistics\n\n`;
-  md += `| Language   | Files | Bytes   | Bytes % |\n`;
-  md += `|------------|-------|---------|---------|\n`;
+  md += `| Language           | Files    | Bytes       | Bytes % |\n`;
+  md += `|--------------------|----------|-------------|---------|\n`;
 
   // Table Rows
   for (const [lang, data] of Object.entries(stats.languages)) {
-    md += `| ${lang}${" ".repeat(
-      "------------" - (String(lang).length + 1)
-    )} | ${data.files}${" ".repeat(
-      "-------".length - (String(data.files).length + 2)
-    )} | ${data.bytes.toLocaleString()}${" ".repeat(
-      "---------".length - (String(data.bytes.toLocaleString()).length + 2)
-    )} | ${data.bytesPercent}%${" ".repeat(
-      "---------".length - (String(data.bytesPercent).length + 3)
-    )} |\n`;
+    const langCol = String(lang).padEnd(18);
+    const filesCol = String(data.files).padEnd(8);
+    const bytesCol = String(data.bytes.toLocaleString()).padEnd(11);
+    const percentCol = (data.bytesPercent + "%").padEnd(7);
+
+    md += `| ${langCol} | ${filesCol} | ${bytesCol} | ${percentCol} |\n`;
   }
   md += `\n\n`;
 
   md += `### 📊 Other Statistics\n\n`;
-  md += `| Language   | Files | Bytes   |\n`;
-  md += `|------------|-------|---------|\n`;
+  md += `| Language         | Files   | Bytes         |\n`;
+  md += `|------------------|---------|---------------|\n`;
 
   // Table Rows
   for (const [lang, data] of Object.entries(stats.other)) {
-    md += `| ${lang}${" ".repeat(
-      "------------".length - (lang.length + 2)
-    )} | ${data.files}${" ".repeat(
-      "-------".length - (String(data.files).length + 2)
-    )} | ${data.bytes.toLocaleString()}${" ".repeat(
-      "---------".length - (String(data.bytes.toLocaleString()).length + 2)
-    )} |\n`;
+    const langCol = String(lang).padEnd(16);
+    const filesCol = String(data.files).padEnd(7);
+    const bytesCol = String(data.bytes.toLocaleString()).padEnd(13);
+
+    md += `| ${langCol} | ${filesCol} | ${bytesCol} |\n`;
   }
 
   // Totals
