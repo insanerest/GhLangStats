@@ -1,6 +1,6 @@
 {
   "name": "ghlangstats",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "a CLI to detect programming languages and frameworks used in a GitHub user’s public repositories.",
   "main": "./bin/cli.js",
   "bin": {
