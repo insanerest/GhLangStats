@@ -8,7 +8,6 @@ const BASE_DIR = isPkg
   ? path.dirname(process.execPath) // runtime binary folder
   : path.resolve(); // project root in dev
 
-console.log(BASE_DIR)
 const CACHE_DIR = path.join(BASE_DIR,"cache");
 if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR);
 
