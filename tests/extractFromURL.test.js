@@ -7,7 +7,7 @@ describe("extractFromURL", () => {
     expect(result.repoOwner).toBe("insanerest");
     expect(result.repoName).toBe("helloworld");
     expect(result.resultPath).toBe(
-      path.resolve("src", "cache", result.repoOwner, `${result.repoName}.json`)
+      path.resolve( "cache", result.repoOwner, `${result.repoName}.json`)
     );
   });
 
@@ -16,7 +16,7 @@ describe("extractFromURL", () => {
     expect(result.repoOwner).toBe("abc");
     expect(result.repoName).toBe("xyz");
     expect(result.resultPath).toBe(
-      path.resolve("src", "cache", result.repoOwner, `${result.repoName}.json`)
+      path.resolve("cache", result.repoOwner, `${result.repoName}.json`)
     );
   });
 });

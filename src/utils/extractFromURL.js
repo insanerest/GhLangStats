@@ -5,7 +5,7 @@ function extract(url){
     const repoName = split[splitL-1]
 
     const repoOwner = split[splitL - 2];
-    const resultPath = path.resolve("src", "cache", repoOwner, `${repoName}.json`)
+    const resultPath = path.resolve("cache", repoOwner, `${repoName}.json`)
     return {repoOwner,repoName,resultPath}
 }
 
