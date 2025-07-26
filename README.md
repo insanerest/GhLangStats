@@ -4,6 +4,8 @@
 [![codecov](https://codecov.io/gh/insanerest/GhLangStats/branch/main/graph/badge.svg)](https://codecov.io/gh/insanerest/GhLangStats)
 ![issues](https://img.shields.io/github/issues/insanerest/GhLangStats)
 ![license](https://img.shields.io/github/license/insanerest/GhLangStats)
+[![npm](https://img.shields.io/npm/dt/ghlangstats.svg)](https://www.npmjs.com/package/ghlangstats)
+[![npm](https://img.shields.io/npm/v/ghlangstats.svg)](https://www.npmjs.com/package/ghlangstats)
 
 > 🧠 A CLI to detect programming languages and frameworks used in a GitHub user’s public repositories.
 
