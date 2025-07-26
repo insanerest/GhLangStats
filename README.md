@@ -11,6 +11,10 @@
 
 ---
 
+![Demo](https://raw.githubusercontent.com/insanerest/GhLangStats/main/.github/demo.gif)
+
+---
+
 ## 🚀 Features
 
 - Analyze public repositories of any GitHub user  
