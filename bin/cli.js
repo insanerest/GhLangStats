@@ -63,7 +63,8 @@ Examples:
   $ ghlangstats --user insanerest
   $ ghlangstats -r https://github.com/octocat/Hello-World -f json
 `
-  );
+  )
+  .showHelpAfterError("(add --help for more information)");
 
 (async () => {
   program.parse();
