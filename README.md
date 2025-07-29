@@ -7,6 +7,9 @@
 [![npm](https://img.shields.io/npm/dt/ghlangstats.svg)](https://www.npmjs.com/package/ghlangstats)
 [![npm](https://img.shields.io/npm/v/ghlangstats.svg)](https://www.npmjs.com/package/ghlangstats)
 
+time spent on this project:
+[![wakatime](https://wakatime.com/badge/user/6d0c0e21-5c17-43c9-8782-5a9b4529ac0b/project/24a533f6-168d-4db8-8466-addd16015d92.svg)](https://wakatime.com/badge/user/6d0c0e21-5c17-43c9-8782-5a9b4529ac0b/project/24a533f6-168d-4db8-8466-addd16015d92)
+
 > 🧠 A CLI to detect programming languages and frameworks used in a GitHub user’s public repositories.
 
 ---
