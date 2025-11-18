@@ -1,6 +1,8 @@
 
 # GhLangStats
 
+## THIS PROJECT IS NOT BEING MAINTAINED ANYMORE
+
 [![codecov](https://codecov.io/gh/insanerest/GhLangStats/branch/main/graph/badge.svg)](https://codecov.io/gh/insanerest/GhLangStats)
 ![issues](https://img.shields.io/github/issues/insanerest/GhLangStats)
 ![license](https://img.shields.io/github/license/insanerest/GhLangStats)
@@ -95,15 +97,6 @@ Read the [Documentation](https://github.com/insanerest/GhLangStats/wiki) for all
     - Searches for the presence of config files for popular frameworks
 3. Aggregate and return summary
 
----
-
-## 🤝 Contributing
-
-Pull requests are welcome! For major changes, please open an issue first.
-
-## 🐞 Issues
-
-Found a bug or have a suggestion? [Open an issue](https://github.com/insanerest/GhLangStats/issues).
 
 ---
 
@@ -115,5 +108,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 📫 Contact
 
-Created and maintained by [insanerest](https://github.com/insanerest).  
+ [insanerest](https://github.com/insanerest).  
+ Discord: `insanerst`
+
+
 
